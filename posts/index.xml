@@ -563,5 +563,23 @@ Delete-Revision插件被删除替代
  Mar. 给 JavaScript 初心者的 ES2015 实战 [2018-03-05]  Feb. Using Conic Gradients and CSS Variables to Create a Doughnut Chart Output for a Range Input [2018-02-06] In Defense of Utility-First CSS [2018-02-06] CSS Utility Classes and &amp;ldquo;Separation of Concerns&amp;rdquo; [2018-02-06]  10 things I love about Vue [2018-02-28] A Drip of Javascript [2018-02-28]  Jan.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://daily.whidy.net/posts/2019-03-15-how-to-open-80-port-with-eggjs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://daily.whidy.net/posts/2019-03-15-how-to-open-80-port-with-eggjs/</guid>
+      <description>如何给Egg.js项目开启80端口访问 为什么要 因某些特殊情况，项目cdn做了防盗链，然后本地开发也收到了限制，在cdn设置了一些本地ip的白名单，居然对端口支持不好，结果有时候可以访问cdn资源，有时候又不行，无奈，和运维、后端商量讲开发地址暂时改成80端口，以便正常开发~
+ Egg.js的项目改端口很简单啦。但是也有一些要注意的，本文面向MacOS，当然Linux系统应该同样适用。
+ 如何做 这里有几个方案，供君参考：
+修改package.json 跑哪个命令就在这个命令后面加--port=80，例如：
+&amp;quot;start&amp;quot;: &amp;quot;egg-scripts start --daemon --title=egg-server-51la-web-egg --workers=2 --port=80&amp;quot;, ...  dev同理。
+配置config.local.js 如果没有这个文件自己创建一个，当然这个对应的是开发模式下使用。
+部分配置如下：
+&#39;use strict&#39;; module.exports = app =&amp;gt; { const exports = {}; exports.cluster = { listen: { port: 80, hostname: &#39;127.0.0.1&#39;, }, }; return exports; };  Nginx大法 比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节：
+ 部署  Warning 如果你不看这部分，很遗憾，你肯定跑不起来。你可能会遇到下面这些异常情况：
+ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, signal: null, suicide: false, state: dead), current workers: []  原因是Node.</description>
+    </item>
+    
   </channel>
 </rss>
