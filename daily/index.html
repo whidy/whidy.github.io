@@ -81,7 +81,11 @@
     
       
         
-          <li><a href="/daily">Daily</a></li>
+          <li><a href="/daily">Daily📒</a></li>
+        
+      
+        
+          <li><a href="/post">Post😍</a></li>
         
       
       
@@ -91,7 +95,11 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/daily">Daily</a></li>
+        <li><a href="/daily">Daily📒</a></li>
+      
+    
+      
+        <li><a href="/post">Post😍</a></li>
       
     
   </ul>
@@ -109,9 +117,148 @@
     
 
     
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-06-05-nuxt-auth/">Nuxt在SPA模式下的鉴权处理(1)</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-06-05
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年6月5日 阴雨 一般
+最近项目使用了Nuxt, 不过由于考虑到项目需要快速上线, 放弃了SSR, 直接采用单页面SPA模式进行开发, 也是本人第一次使用Nuxt来进行项目开发, 以下是我开发中对于鉴权这块的研究和总结, 因为官方给了一个鉴权示例是基于Server端的, 所以我就又写了一篇Client端的鉴权总结~
+文章分为很多篇, 会逐步完善更新, 请耐心等待&hellip;
+ 预备知识  Vue和Vuex Document.cookie HTTP 的基本性质 Window.localStorage和Window.sessionStorage  介绍 Nuxt.js 是一个基于 Vue.js 的通用应用框架。那么既然是基于Vue的, 它自然也就用到的Vuex, 那么会遇到一个问题, 它本是状态管理模式, 不过有时候我们会作为数据共享的一种解决方案, 但是它会在页面刷新时丢失.
+因此在Vue项目开发中, 我们每次刷新获取数据可能只有两种方式:
+ 每次刷新都会向服务器发送请求, 拿到数据后, 对页面重新更新视图 每次操作都会存在本客户端的Cookie或者Storage中  很显然一般情况下, 第一种方法会给服务器资源造成浪费, 除非需要获取的数据是频繁变化的, 那么我们一般会使用第二种. 下面就主要针对第二个方案进行总结.
+需求分析 我们都知道HTTP是无状态的, 那么为了让用户每次访问页面的时候会话能够保持, 则需要用cookie或者storage来记录. 我们后台的session有效期为半小时.
+在这半小时内, 用户处于登录状态, 本地也保存了有效凭证的情况下, 则该用户的有效资源请求可以被执行, 而无需服务器每次进行验证~
+需求方希望本地存储的凭证会在会话关闭后清除, 因此我们首先排除localStorage, 考虑使用Cookie和sessionStorage! 又因为本人比较懒, Cookie操作比较麻烦, 所以决定使用sessionStorage.(虽然最后还使用了插件&hellip;)
+基础实例  用sessionStorage存储Vuex全局data的方式展示
+创建一个Nuxt应用  我们基于Nuxt的Starter的Cli来构建一个简单的Nuxt应用, 命令如下
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-06-05-nuxt-auth/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-04-16-vue-axios/">Vue中Axios请求数据渲染研究</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-04-16
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-04-16-vue-axios/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-04-01-shadowsocksmanager/">shadowsocks-manager搭建</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-04-01
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年4月1日 晴 一般
+ shadowsocks-manager搭建  该文章仅作为日志记录一下, 因为工作原因, 或者个人原因吧, 会习惯使用谷歌去查找技术资料, 所以shadowsocks在工作生活中必不可少, 之前买了个国外的服务器, 一直用着不错, 也有几个比较好的朋友想要买我的这个梯子, 于是就搭建了一个官方的管理平台.
+ 以下内容主要参阅: WebGUI
+安装shadowsocks-libev 我的centos7之前用的网上的一键安装, 虽然那个捆绑式安装过shadowsocks-libev, 也能正常使用shadowsocks, 但是无法使用命令ss-manager, 于是只能重新搞. 大致流程如下:
+删除旧版(好吧,这里暴露了) # wget &ndash;no-check-certificate -O shadowsocks-libev.sh <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh</a> # chmod +x shadowsocks-libev.sh # ./shadowsocks-libev.sh uninstall  输入y
+正常安装 # yum install epel-release -y # yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel -y  此时需要用第三方源(centos7)</p>
+
+<h1 id="vi-etc-yum">vi /etc/yum.</h1>
+
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-04-01-shadowsocksmanager/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-29-note/">日志</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-29
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-29-note/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-26-note/">日志</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-26
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年3月26日 阴 一般
+ 日志 搭建移动端网站架子  Vue + mint-ui
+ # 全局安装 vue-cli $ npm install &ndash;global vue-cli # 创建一个基于 webpack 模板的新项目 $ vue init webpack 51la-mpa # 安装依赖，走你 $ cd 51la-mpa $ npm install $ npm run dev  其中安装过程中, 根据个人需要, 配置选择如下
+? Target directory exists. Continue? Yes ? Project name 51la-mpa ? Project description A Vue.js project ? Author ShunBai &lt;shunbai@infinite.net.cn&gt; ? Vue build standalone ?
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-26-note/">更多 →</a></div>
+    </div>
+    
     <div class="pagination">
   <div class="pagination__buttons">
     
+    
+      <span class="button next">
+        <a href="/daily/page/2/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
     
   </div>
 </div>

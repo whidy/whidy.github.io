@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=""/>
+<meta name="keywords" content="whidy daily blog"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/daily/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here." />
+<meta name="twitter:description" content="" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.">
+<meta property="og:description" content="" />
+<meta property="og:url" content="/daily/" />
+<meta property="og:site_name" content="Dailies" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Whidy Daily" />
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Daily Note
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/daily">Daily📒</a></li>
+        
+      
+        
+          <li><a href="/post">Post😍</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/daily">Daily📒</a></li>
+      
+    
+      
+        <li><a href="/post">Post😍</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="posts">
+    
+    
+    
+
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-22-nginx-phpfpm/">Nginx的站点配置/PHP-FPM配置</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-22
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年3月22日 晴 一般
+ Nginx的站点配置/PHP-FPM配置 22号是艰难的一天. 各种爆炸!
+Nginx的站点配置  昨晚, 回去看了一下百度统计, 一下子就炸了. 在我还不了解Nginx配置的情况下, 我只是让首页正常访问了&hellip; 其他页面全挂. 于是开始了大量英文资料的阅读.
+ 以下内容围绕nginx.conf配置文件展开, 也不知道是不是版本区别, 总跟网上的文章有些不一样, 我也陷入迷茫.
+我要解决的问题:
+ 博客所有页面(包括文章伪静态)访问正常; 其他域名(whidy.net, whidy.cn, www.whidy.cn)均需要301转向到www.whidy.net, 避免分权 针对wordpress的相关优化(可选)  那么, 基于Nginx对服务器的管理的研究, 我发现其主要针对不同的站点进行Server Block配置, 而Server Block如何管理, 我查了大量资料, 比如这里有一篇文章摘要
+ To begin, we will need to set up the directory that our server blocks will be stored in, as well as the directory that tells Nginx that a server block is ready to serve to visitors.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-22-nginx-phpfpm/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-21-nginx/">Wordpress改用Nginx</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-21
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年3月21日 晴 一般
+ 博客改用Nginx  接昨晚, 从Apache换成Nginx, 本来是很简单的. 但是基于我的有点点特殊, 考虑到操作的正确性, 我完整的做了一份记录.
+ 删除Apache及对应的PHP 之前2018-03-17-php-upgrade-7.x有提到的, 我不确定Nginx跟部分PHP有关联, 因此保险起见, 我将同Apache一并安装的PHP也删了, 因为安装高版本PHP需要用到第三方源IUS, 因此再次执行如下命令
+$ cd ~ $ curl &lsquo;<a href="https://setup.ius.io/'">https://setup.ius.io/'</a> -o setup-ius.sh $ sudo bash setup-ius.sh  删除旧版PHP 这是应用于Apache上的PHP相关组建, 因此需要删了等下装Nginx对应PHP
+$ sudo yum remove php-cli mod_php php-common  删除Apache(可选) 你可以保留Apache, 也可以删除, 我目前是保留的. 如果保留则需要关闭服务(Nginx同端口冲突), 并且停用开机自启动服务
+$ sudo systemctl stop httpd.service $ sudo systemctl remove httpd.service  彻底删除Apache
+$ sudo yum remove httpd  安装Nginx及PHP 我们要开始正是安装Nginx啦
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-21-nginx/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-20-mariadb/">MariaDB崩溃分析/Wordpress改用Nginx</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-20
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年3月20日 阴晴 一般
+ MariaDB崩溃分析/博客改用Nginx  最近SB哥们在我服务器上面做hadoop实验, 结果搞得我博客总是崩溃, 之前以为是偶然现象或者是被攻击, 目前看来是服务器配置低了😭, 毕竟是白菜服务器.
+ 博客崩溃修复小结 昨天很忙, 一直在处理微信授权的逻辑合理性和体验, 尽早发现博客又挂了, 初步检测是MariaDB挂了, 原因尚不明确.
+重启MariaDB服务, 恢复数据库的连接 先检查状态, 确认是MariaDB崩溃后重启服务
+[root@VM_0_3_centos ~]# systemctl status mariadb ● mariadb.service - MariaDB database server Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled; vendor preset: disabled) Active: inactive (dead) since Tue 2018-03-20 14:03:14 CST; 1h 39min ago Process: 4096 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=0/SUCCESS) Process: 4095 ExecStart=/usr/bin/mysqld_safe &ndash;basedir=/usr (code=exited, status=0/SUCCESS) Process: 4063 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS) Main PID: 4095 (code=exited, status=0/SUCCESS) Mar 20 08:26:25 VM_0_3_centos systemd[1]: Starting MariaDB database server.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-20-mariadb/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-18-jekyll-ruby-rails-linux-weapp/">CentOS7安装Jekyll和Rails</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-18
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年3月18日 阴 一般
+ CentOS7安装Jekyll/Rails/Linux用户管理/微信小程序页面加载问题  打算把我的wordpress博客移植到Jekyll上面, 于是试了下, 之前有在国外的VPS搭过一个Jekyll站点<a href="http://daily.whidy.net/">http://daily.whidy.net/</a>, 纯静态的感觉很棒, 因此尝试一下移植的效果~
+ CentOS7下安装Jekyll环境搭建 安装Jekyll需要  Ruby RubyGems NodeJS Python 2.7(Whidy比较懒, 貌似CentOS7自带? 还是啥时候装了, 不会的自己搜一下= =.)  安装Ruby2.5.0和RubyGems  目前最新稳定版本是2.5.0, CentOS自带源的版本比较老, 我们需要第三方源rbenv来安装最新稳定版, 安装方法如下:
+  安装rbenv和Ruby依赖的组件</p>
+
+<h1 id="sudo-yum-install-y-git-core-zlib-zlib-devel-gcc-c-patch-readline-readline-devel-libyaml-devel-libffi-devel-openssl-devel-make-bzip2-autoconf-automake-libtool-bison-curl-sqlite-devel-安装rbenv和rub-build-务必在非root用户的home下面操作">sudo yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel  安装rbenv和rub-build(务必在非root用户的home下面操作)</h1>
+
+<h1 id="cd-git-clone-git-github-com-sstephenson-rbenv-git-rbenv-echo-export-path-quot-home">cd ~ # git clone git://github.com/sstephenson/rbenv.git .rbenv # echo &lsquo;export PATH=&quot;$HOME/.</h1>
+
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-18-jekyll-ruby-rails-linux-weapp/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-17-php-upgrade-7.x/">日志</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-17
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年3月17日 阴 一般
+ 服务器相关折腾 CentOS7升级PHP7.2 我有个毛病, 就是喜欢没事搞搞优化, 本来好端端的东西, 一听说还能更好, 就止不住的折腾, 这不, 一个朋友说PHP7性能好很多(顺便查了下, PHP的性能演进(从PHP5.0到PHP7.1的性能全评测)), 我才折腾半天装的PHP5.6, 又寻思着安装到7.x, 好在一切都比较容易, 大概方法如下:
+ 在CentOS 7上官方的源是只有php5.4的, 这个大家都知道了, 于是这次又用到第三方源IUS repository.
+ 假设目前最高权限下, 这里仅介绍Apache下的更新, 还有Nginx的, 末尾有参阅文章自行查阅. 步骤如下:</p>
+
+<h1 id="cd-curl-https-setup-ius-io-o-setup-ius-sh-bash-setup-ius-sh-然后删除旧版">cd ~ # curl &lsquo;<a href="https://setup.ius.io/'">https://setup.ius.io/'</a> -o setup-ius.sh # bash setup-ius.sh  然后删除旧版</h1>
+
+<h1 id="yum-remove-php-cli-mod-php-php-common-接着安装php7-2">yum remove php-cli mod_php php-common  接着安装php7.2</h1>
+
+<h1 id="yum-install-mod-php72u-php72u-cli-php72u-mysqlnd-重新启动apache加载新的mod-php">yum install mod_php72u php72u-cli php72u-mysqlnd  重新启动Apache加载新的mod_php</h1>
+
+<h1 id="apachectl-restart-重启服务">apachectl restart  重启服务</h1>
+
+<h1 id="systemctl-status-httpd-至此升级完成">systemctl status httpd  至此升级完成~</h1>
+
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-17-php-upgrade-7.x/">更多 →</a></div>
+    </div>
+    
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+      <span class="button previous">
+        <a href="/daily/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Newer posts</span>
+        </a>
+      </span>
+    
+    
+      <span class="button next">
+        <a href="/daily/page/3/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=""/>
+<meta name="keywords" content="whidy daily blog"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/daily/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here." />
+<meta name="twitter:description" content="" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.">
+<meta property="og:description" content="" />
+<meta property="og:url" content="/daily/" />
+<meta property="og:site_name" content="Dailies" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Whidy Daily" />
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Daily Note
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/daily">Daily📒</a></li>
+        
+      
+        
+          <li><a href="/post">Post😍</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/daily">Daily📒</a></li>
+      
+    
+      
+        <li><a href="/post">Post😍</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="posts">
+    
+    
+    
+
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-01-29-es6-function/">ECMAScript6入门/函数</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-01-29
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年1月29日 阴有小雨 一般
+ ECMAScript6入门 / 函数 ECMAScript6入门 我再次阅读字符串的扩展这部分, 老实说, 这一节关于charCodeAt, charAt, codePointAt, fromCodePoint, at, normalize这些东西感到枯燥的很, 我还不能理解这些内容在实际应用上的广泛性.
+函数(Function)  关于函数得知识点, 我才发现我欠缺的多得多. 以下是我对函数了解较少或者需要注意的几个点得总结.
+ 作用域和函数堆栈 递归 例如，思考一下如下的函数定义：
+var foo = function bar() { // statements go here };  在这个函数体内，以下的语句是等价的：
+ bar() arguments.callee() foo()  获取树结构中所有的节点时，使用递归实现要容易得多：
+function walkTree(node) { if (node == null) // return; // do something with node for (var i = 0; i &lt; node.childNodes.length; i++) { walkTree(node.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-01-29-es6-function/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-01-28-styledcomponents/">styledcomponents/todolist/toreadlist</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-01-28
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-01-28-styledcomponents/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-01-26-es6-pwa/">ECMAScript6入门/PWA了解</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-01-26
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年1月26日 阴 一般
+ ECMAScript6入门 / PWA了解 ECMAScript 6 入门  复习前几天学习的基础, 并继续学习(话说早就说再看函数了, 结果又绕回前面几章节了😂)
+ 变量提升 这个不是第一次说了, 但是之前看的没那么仔细, 今天小结几个容易忘记和忽略的地方.
+函数体内引入外部变量时, 即便函数体内重复声明外部变量的代码看起来没有执行, 但依旧会被提升. 如下示例, 容易以为false内的代码块不执行, 则输出日期的错误.
+var tmp = new Date(); function f() { console.log(tmp); if (false) { var tmp = &lsquo;hello world&rsquo;; } } f(); // undefined  另外一个类似的:
+var is_android = true; if (is_android) { function foo() { console.log(&lsquo;I am Android&rsquo;); } } else { function foo() { console.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-01-26-es6-pwa/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-01-25-gatsby-strapi-mongodb/">安装Gatsby和Strapi过程中的各种问题</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-01-25
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年1月24日 阴 一般
+ 安装Gatsby和Strapi VPS上安装Gatsby和Strapi中遇到的各种问题解决方案和相关记录  接着昨天的, 继续解决昨天没有处理好的问题, 下班的时候问了个开发同事, 我说为啥连接总是超时, 但是有时候好像又能连上, 他说查一下具体的日志会比较好, 等下就试试.
+ 解决mongo创建服务器的WARNING提示  大多数情况下我是不愿意理睬WARNING信息的, 只要不是ERROR就好, 但是这次我有点不爽, 折腾了一会发现有的很难处理, 我错了, 我想我还是不死磕了吧😱
+ soft rlimits too low WARNING: soft rlimits too low. rlimits set to 1024 processes, 64000 files. Number of processes should be at least 32000 : 0.5 times number of files.  参考:
+ MongDB 启动警告 WARNING: soft rlimits too low How to set ulimits for mongod?
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-01-25-gatsby-strapi-mongodb/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-01-24-gatsby-strapi-mongodb/">安装Gatsby和Strapi过程中的各种问题</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-01-24
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            <p>2018年1月24日 阴 一般
+ 安装Gatsby和Strapi VPS上安装Gatsby和Strapi中遇到的各种问题解决方案和相关记录  参考Building a static blog using Gatsby and Strapi
+ 安装Gatsby  事情总是不是那么顺利.
+ 根据Gatsby文档Get started, 执行到如下命令时:</p>
+
+<h1 id="gatsby-new-gatsby-site-报错-需要git-然而我的服务器没装-那就装一个吧-参考download-for-linux-and-unix执行">gatsby new gatsby-site  报错, 需要git. 然而我的服务器没装, 那就装一个吧. 参考Download for Linux and Unix执行:</h1>
+
+<h1 id="yum-install-git-再次执行后依旧报错-当前git版本1-7-1">yum install git  再次执行后依旧报错(当前git版本1.7.1)</h1>
+
+<p>error Command failed: git clone git://github.com/gatsbyjs/gatsby-starter-default.git gatsby-site &ndash;single-branch  推测是版本问题. 只好手动安装了. 于是又找到这个安装 Git</p>
+
+<h1 id="yum-install-curl-devel-expat-devel-gettext-devel-openssl-devel-zlib-devel-wget-https-www-kernel-org-pub-software-scm-git-git-2-16-1-tar-gz-tar-zxf-git-2">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel # wget <a href="https://www.kernel.org/pub/software/scm/git/git-2.16.1.tar.gz">https://www.kernel.org/pub/software/scm/git/git-2.16.1.tar.gz</a> # tar -zxf git-2.</h1>
+
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-01-24-gatsby-strapi-mongodb/">更多 →</a></div>
+    </div>
+    
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+      <span class="button previous">
+        <a href="/daily/page/5/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Newer posts</span>
+        </a>
+      </span>
+    
+    
+      <span class="button next">
+        <a href="/daily/page/7/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

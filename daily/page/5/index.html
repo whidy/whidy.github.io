@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=""/>
+<meta name="keywords" content="whidy daily blog"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/daily/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here." />
+<meta name="twitter:description" content="" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.">
+<meta property="og:description" content="" />
+<meta property="og:url" content="/daily/" />
+<meta property="og:site_name" content="Dailies" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Whidy Daily" />
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Daily Note
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/daily">Daily📒</a></li>
+        
+      
+        
+          <li><a href="/post">Post😍</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/daily">Daily📒</a></li>
+      
+    
+      
+        <li><a href="/post">Post😍</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="posts">
+    
+    
+    
+
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-06-es6-function/">ECMAScript6入门</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-06
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月6日 晴 一般
+ ECMAScript6入门 今天肚子不舒服状态不佳, 粗略的把第6.数值的扩展看完了. 感觉就是Math相关方法太多了, 我肯定记不住了.大概留点印象吧.
+函数的扩展 然后接着看7.函数的扩展
+参数默认值的位置  只有函数的尾参数可以省略 javascript function f(x, y = 5, z) { return [x, y, z]; } f() // [undefined, 5, undefined] f(1) // [1, 5, undefined] f(1, ,2) // 报错 f(1, undefined, 2) // [1, 5, 2]  如果传入undefined，将触发该参数等于默认值，null则没有这个效果。 函数也是有length属性的, 但是有个特点, 它依次计算至有参数默认值为止, 加入第一个就有参数, 那长度以然是0. javascript (function (a) {}).length // 1 (function (a = 5) {}).length // 0 (function (a, b, c = 5) {}).
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-06-es6-function/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-05-replace-exec/">replace和exec函数</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-05
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月5日 晴 一般
+ replace和exec函数  不好意思我还在看正则部分, 才发现replace函数一点也不简单.
+ 语法 str.replace(regexp|substr, newSubStr|function)  使用字符串作为参数  变量名 | 代表的值 $$ | 插入一个 &ldquo;$&ldquo;。 $&amp; | 插入匹配的子串。 $<code>| 插入当前匹配的子串左边的内容。 $' | 插入当前匹配的子串右边的内容。 $n | 假如第一个参数是 RegExp对象，并且 n 是个小于100的非负整数，那么插入第 n 个括号匹配的字符串。  这个表格除了$n之前用过其他的全部没用过. 也一下没看懂, 写了几段demo, 算是明白了- -, 不过应用场景还不太了解.
+let str = '123abcXYZ'; console.log(str.replace(/ab/, '-$$-')); //123-$-cXYZ console.log(str.replace(/ab/, '-$&amp;amp;-')); //123-ab-cXYZ console.log(str.replace(/ab/, '-$</code>-&lsquo;)); //123-123-cXYZ console.log(str.replace(/ab/, &lsquo;-$\&lsquo;-&rsquo;)); //123-cXYZ-cXYZ (注意单引号. 转义) console.log(str.replace(/a(b)/, &lsquo;-$1-&rsquo;)); //123-b-cXYZ  这样在对着上面的解读, 算是明白一点了- -.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-05-replace-exec/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-02-postcss/">PostCSS中让CSS文件支持SCSS语法/postcss-cssnext和precss的区别和选择</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-02
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月2日 晴 一般
+ PostCSS相关研究  昨天下班的时候看到一篇PostCSS — beyond the Autoprefixer跟PostCSS的文章, 提取了我的兴趣, 没来得及看, 粗读了一下, 让我想起之前有个疑惑的问题, PostCSS的众多插件, 很多功能有相似之处, 到底要怎么应用在项目中呢?
+另外, 昨天下班后在SegmentFault上面看到一个提问: vscode使用postcss，如何才能不对css的嵌套等语法报错, 正巧以前也遇到过思考过这个问题. 今天顺便就再次折腾了一下~
+ 项目中使用PostCSS且让CSS文件支持SCSS语法的方案 这个问题我早上试了下, 比较容易, 所以先做一点总结.
+思考 - 如何让CSS文件真的像SCSS一样呢  最早相对系统的学习PostCSS是接近半年前了, 就不太明白PostCSS官方的插件推荐Syntaxes列表里postcss-scss和postcss-sass这些做什么的, 不是有csspre之类的插件可以直接处理吗, 如今假设理解没错的话, 这些插件就是让你的css支持它的语法, 如果有人还不是很清楚SCSS和Sass的区别可以阅读Intro to SCSS for Sass Users
+ 我们通过安装插件postcss-scss使css支持SCSS语法, 当然这个插件能力有限, 官方说明如下:
+ This module does not compile SCSS. It simply parses mixins as custom at-rules &amp; variables as properties, so that PostCSS plugins can then transform SCSS source code alongside CSS.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-02-postcss/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-01-regexp/">复习正则表达式</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-01
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月1日 晴 无聊
+ 复习正则表达式  昨天感觉不在状态, 边看正则边打酱油, 所以没有什么好写的, 今天总结一下.
+正好ES6也有正则方面的内容, 看看有什么新特性, 顺便又把精通正则表达式拿出来粗看了前面几章节, 于是给自己出了几道题.
+ 题一: 找出符合规则的时间 匹配符合标准格式的时间. 这是内容部分:
+now is 09:4 am test now isx9:4 am test now isx2:54 am test now isA09:04 amwtest now is_12:30 pm adsadadasda now is 21:59 amdsadasdwq now is 22:75 am_dsad21 now is 41:60 pm dsadsad now is 26:23 am dwadwq now is 2a:23 am dwadwq  期望结果(虽然24小时制后面存在[ap]m感觉还是不太合理.)
+09:4 am 9:4 am 2:54 am 09:04 am 12:30 pm 21:59 am  看起来应该不是很复杂.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-01-regexp/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-01-30-es6-javascript-event/">ECMAScript6入门/JS事件</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-01-30
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年1月30日 小雨 无聊
+ ECMAScript6入门 / JS事件 模板字符串(Template literals)中的标签模板  模板字符串非常棒的功能, 减少了HTML拼接的繁琐, 其中标签模板, 这个东西初看起来很奇怪, 多结合实例会好理解一些.
+以下结合MDN和ECMAScript6入门做个笔记
+标签函数的第一个参数包含一个字符串值的数组。其余的参数与表达式相关。
+ 来看看这个例子:
+let a = 5; let b = 10; tag<code>Hello ${a + b} world ${a * b}</code>; // 等同于 tag([&lsquo;Hello &lsquo;, &rsquo; world &lsquo;, &ldquo;], 15, 50);  个人理解: 简单的说, <code>Hello ${a + b} world ${a * b}</code> 会被表达式(例如: ${a + b})分割一个包含多个字符串的数组(即[&lsquo;Hello &lsquo;, &rsquo; world &lsquo;, &ldquo;]), 需要注意的是${a * b}后面还有个&rdquo;(其实似乎也可以认为有n个表达式, 就有n+1个字符串长度的数组), 而表达式部分会按顺序作为参数传入自定义的tag方法.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-01-30-es6-javascript-event/">更多 →</a></div>
+    </div>
+    
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+      <span class="button previous">
+        <a href="/daily/page/4/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Newer posts</span>
+        </a>
+      </span>
+    
+    
+      <span class="button next">
+        <a href="/daily/page/6/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
