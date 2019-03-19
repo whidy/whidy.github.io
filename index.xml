@@ -860,10 +860,10 @@ Delete-Revision插件被删除替代
     
     <item>
       <title></title>
-      <link>/daily/2018-to-do-list/</link>
+      <link>/2018-to-do-list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-to-do-list/</guid>
+      <guid>/2018-to-do-list/</guid>
       <description>2018 Jan. To Do List  这是一个任务列表, 代表我在本月做的技术方面学习的计划, 尽量有序的进行学习.
 目前规则相对简单, 如有调整将陆续补充.
 这是一段示例
@@ -873,10 +873,10 @@ Delete-Revision插件被删除替代
     
     <item>
       <title></title>
-      <link>/daily/2018-to-read-list/</link>
+      <link>/2018-to-read-list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-to-read-list/</guid>
+      <guid>/2018-to-read-list/</guid>
       <description>2018 To Read List  这是一个任务列表, 代表这个月学习中发现的不错的, 但是目前还尚未能理解的文章, 暂时保存在将要阅读的列表, 便于回读.
 目前规则相对简单, 如有调整将陆续补充.
 这是一段示例
