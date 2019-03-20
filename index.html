@@ -139,11 +139,10 @@
  如何做 这里有几个方案，供君参考：
 修改package.json 跑哪个命令就在这个命令后面加&ndash;port=80，例如：
 &quot;start&quot;: &quot;egg-scripts start &ndash;daemon &ndash;title=egg-server-51la-web-egg &ndash;workers=2 &ndash;port=80&quot;, &hellip;  dev同理。
-配置config.local.js 如果没有这个文件自己创建一个，当然这个对应的是开发模式下使用。
-部分配置如下：
-&lsquo;use strict&rsquo;; module.exports = app =&gt; { const exports = {}; exports.cluster = { listen: { port: 80, hostname: &lsquo;127.0.0.1&rsquo;, }, }; return exports; };  Nginx大法 比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节：
- 部署  Warning 如果你不看这部分，很遗憾，你肯定跑不起来。你可能会遇到下面这些异常情况：
-ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, signal: null, suicide: false, state: dead), current workers: []  原因是Node.
+配置config.default.js 部分配置如下：
+&lsquo;use strict&rsquo;; module.exports = app =&gt; { const exports = {}; exports.cluster = { listen: { port: 80, hostname: &lsquo;127.0.0.1&rsquo;, }, }; return exports; };  以上方法都适用于执行egg-scripts时有效（例如npm start）。如果需要执行npm run dev，开启，请参考上文修改package.json的方案。
+ 我最初通过设置config.local.js来实现，发现竟然不成功，报错！报错信息部分如下：
+&gt; [egg-scripts] 2019-03-20 14:30:48,033 ERROR 7988 [app_worker] server got error: bind EADDRINUSE null:7001, code: EADDRINUSE &gt; ``` ### Nginx大法 比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节： * [部署](<a href="https://eggjs">https://eggjs</a>.
           
         
       </div>
