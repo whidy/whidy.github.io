@@ -118,6 +118,36 @@
 
     
     <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-07-prototype-constructor/">函数原型和继承学习总结</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-02
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月7日 晴 一般
+ 函数原型和继承学习总结 Object.prototype JS一切皆对象, 对象都具有内置属性<a href="也可用__proto__表示">[prototype]</a>. 每个函数创建后拥有名为prototype的属性, 它又有一个constructor, 有个例外: 通过Function.prototype.bind方法构造出来的函数没有prototype属性。
+偷了一张图doris的回答:
+参阅: * 知乎: js中<strong>proto</strong>和prototype的区别和关系？ * MDN: Object.prototype
+Object.prototype.constructor 返回创建实例对象的Object构造函数的引用。 返回值为只读的原始类型.
+这里有个关于改变对象的constructor例子, 比较特别的是, 数字, 布尔, 字符串不被改变.
+ 只有 true, 1 和 &ldquo;test&rdquo; 的不受影响，因为创建他们的是只读的原生构造函数（native constructors）。
+ function Type() { }; Type // ƒ Type() { } var a = []; a.constructor // ƒ Array() { [native code] } a.constructor = Type; a.constructor // ƒ Type() { } &quot;被改变&quot; var b = 666; b.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-07-prototype-constructor/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
       <h1 class="post-title"><a href="/daily/2018-02-06-es6-function/">ECMAScript6入门</a></h1>
       <div class="post-meta">
         <span class="post-date">
@@ -224,34 +254,6 @@ now is 09:4 am test now isx9:4 am test now isx2:54 am test now isA09:04 amwtest 
         
       </div>
       <div><a class="read-more button" href="/daily/2018-02-01-regexp/">更多 →</a></div>
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/daily/2018-01-30-es6-javascript-event/">ECMAScript6入门/JS事件</a></h1>
-      <div class="post-meta">
-        <span class="post-date">
-          2018-01-01
-        </span>
-        <span class="post-author">:: whidy</span>
-      </div>
-
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            2018年1月30日 小雨 无聊
- ECMAScript6入门 / JS事件 模板字符串(Template literals)中的标签模板  模板字符串非常棒的功能, 减少了HTML拼接的繁琐, 其中标签模板, 这个东西初看起来很奇怪, 多结合实例会好理解一些.
-以下结合MDN和ECMAScript6入门做个笔记
-标签函数的第一个参数包含一个字符串值的数组。其余的参数与表达式相关。
- 来看看这个例子:
-let a = 5; let b = 10; tag<code>Hello ${a + b} world ${a * b}</code>; // 等同于 tag([&lsquo;Hello &lsquo;, &rsquo; world &lsquo;, &ldquo;], 15, 50);  个人理解: 简单的说, <code>Hello ${a + b} world ${a * b}</code> 会被表达式(例如: ${a + b})分割一个包含多个字符串的数组(即[&lsquo;Hello &lsquo;, &rsquo; world &lsquo;, &ldquo;]), 需要注意的是${a * b}后面还有个&rdquo;(其实似乎也可以认为有n个表达式, 就有n+1个字符串长度的数组), 而表达式部分会按顺序作为参数传入自定义的tag方法.
-          
-        
-      </div>
-      <div><a class="read-more button" href="/daily/2018-01-30-es6-javascript-event/">更多 →</a></div>
     </div>
     
     <div class="pagination">

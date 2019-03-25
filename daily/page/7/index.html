@@ -118,6 +118,41 @@
 
     
     <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-01-24-gatsby-strapi-mongodb/">安装Gatsby和Strapi过程中的各种问题</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-01-01
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            <p>2018年1月24日 阴 一般
+ 安装Gatsby和Strapi VPS上安装Gatsby和Strapi中遇到的各种问题解决方案和相关记录  参考Building a static blog using Gatsby and Strapi
+ 安装Gatsby  事情总是不是那么顺利.
+ 根据Gatsby文档Get started, 执行到如下命令时:</p>
+
+<h1 id="gatsby-new-gatsby-site-报错-需要git-然而我的服务器没装-那就装一个吧-参考download-for-linux-and-unix执行">gatsby new gatsby-site  报错, 需要git. 然而我的服务器没装, 那就装一个吧. 参考Download for Linux and Unix执行:</h1>
+
+<h1 id="yum-install-git-再次执行后依旧报错-当前git版本1-7-1">yum install git  再次执行后依旧报错(当前git版本1.7.1)</h1>
+
+<p>error Command failed: git clone git://github.com/gatsbyjs/gatsby-starter-default.git gatsby-site &ndash;single-branch  推测是版本问题. 只好手动安装了. 于是又找到这个安装 Git</p>
+
+<h1 id="yum-install-curl-devel-expat-devel-gettext-devel-openssl-devel-zlib-devel-wget-https-www-kernel-org-pub-software-scm-git-git-2-16-1-tar-gz-tar-zxf-git-2">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel # wget <a href="https://www.kernel.org/pub/software/scm/git/git-2.16.1.tar.gz">https://www.kernel.org/pub/software/scm/git/git-2.16.1.tar.gz</a> # tar -zxf git-2.</h1>
+
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-01-24-gatsby-strapi-mongodb/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
       <h1 class="post-title"><a href="/daily/2018-01-23-javascript-es6-babel/">null和undefined复习/ES6作用域和babel的探索</a></h1>
       <div class="post-meta">
         <span class="post-date">
@@ -223,34 +258,6 @@ echo. &gt;&gt; %WINDIR%\system32\drivers\etc\hosts &amp; echo 192.168.1.63 bs.yb
         
       </div>
       <div><a class="read-more button" href="/daily/2018-01-18-website-tweaks-markdown-ssh/">更多 →</a></div>
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/daily/2018-01-17-ftp-css-js/">CSS动画技巧/JS面试题/速查手册/日常学习</a></h1>
-      <div class="post-meta">
-        <span class="post-date">
-          2018-01-01
-        </span>
-        <span class="post-author">:: whidy</span>
-      </div>
-
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            2018年1月17日 晴 一般
- css动画 / JS面试题研究 / 速查手册  完成博客内容Visual Studio Code几款FTP插件使用总结,并发布在SegmentFault文章
- 自己使用Sublime Text 3的SFTP插件时, 执行了同步命令后, 请耐心等待, 否则执行过程中弹出的&rdquo;quick panel&rdquo;会自动消失, sftp的日志输出面板提示(Select via quick panel) No, 除非修改sftp配置&quot;confirm_xxx&quot;()例如&rdquo;confirm_overwrite_newer&ldquo;为true, 就会静默yes, 继续执行.
- 阅读Making CSS Animations Feel More Natural,我觉得应该翻译成,如何让CSS动画看起来更生动 该文通过7个示例, 一点点将一个方块上下跳动的动画进行优化, 让它看起来更加生动. 有几个关键点, @keyframes的分解是否到位, 每个步骤通过transform的scale对其形状进行适当的改变animation-timing-function的选择: linear → ease → cubic-bezier(如果你擅长使用贝赛尔曲线). 对比每个改进, 就会发现这些小小的改动作用非常的大了!
- 阅读Stop Using CSS Selectors for Non-CSS. 文中提到, 不建议使用类名作为事件代理, 不如加一个data-进行DOM扩展, 代理事件. 当然这个操作是否合适, 有相关评论说, 可以采用在类名前面增加前缀&rsquo;js-&lsquo;. 当然作者还是希望. class就是用来负责样式的, 不应该处理其他事情.
- 看到StackOverflow上提出的一个面试题Can (a ==1 &amp;&amp; a== 2 &amp;&amp; a==3) ever evaluate to true?
-          
-        
-      </div>
-      <div><a class="read-more button" href="/daily/2018-01-17-ftp-css-js/">更多 →</a></div>
     </div>
     
     <div class="pagination">

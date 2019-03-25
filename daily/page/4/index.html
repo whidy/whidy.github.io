@@ -118,6 +118,34 @@
 
     
     <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-24-cssnano/">PostCSS不支持部分SASS研究</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-02
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月24日 阴 较差
+ PostCSS不支持部分SASS研究 继续昨天#{$c}如何在PostCSS下得到支持 原环境下, precss插件直接编译报错, 此时&quot;precss&quot;: &quot;^2.0.0&quot;版本较低, 发现官方最新为3.1.0, 更新了, 并不会报错了, 但是编译结果是错误的. 我们回顾一下代码:
+postcss.config.js
+module.exports = { parser: &lsquo;postcss-scss&rsquo;, plugins: [ require(&lsquo;precss&rsquo;) ] };  css
+.component { $c: &amp;; padding: 2vw; &amp;<strong>card { background-color: #fff; &amp;:hover #{$c}</strong>name { color: #bada55; } } &amp;<strong>name { color: #000; } &amp;</strong>button { background-color: blue; color: #fff; } }  期望结果, 可以通过这个在线编译<a href="http://sass.js.org/测试:">http://sass.js.org/测试:</a>
+/* 此段为期望的正确结果 */ .component { padding: 2vw; } .
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-24-cssnano/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
       <h1 class="post-title"><a href="/daily/2018-02-23-cssnano/">Wang Year of the Dog</a></h1>
       <div class="post-meta">
         <span class="post-date">
@@ -215,36 +243,6 @@ function SuperHuman(name, superPower) { this.name = name; this.superPower = supe
         
       </div>
       <div><a class="read-more button" href="/daily/2018-02-08-object-call-apply/">更多 →</a></div>
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/daily/2018-02-07-prototype-constructor/">函数原型和继承学习总结</a></h1>
-      <div class="post-meta">
-        <span class="post-date">
-          2018-02-02
-        </span>
-        <span class="post-author">:: whidy</span>
-      </div>
-
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            2018年2月7日 晴 一般
- 函数原型和继承学习总结 Object.prototype JS一切皆对象, 对象都具有内置属性<a href="也可用__proto__表示">[prototype]</a>. 每个函数创建后拥有名为prototype的属性, 它又有一个constructor, 有个例外: 通过Function.prototype.bind方法构造出来的函数没有prototype属性。
-偷了一张图doris的回答:
-参阅: * 知乎: js中<strong>proto</strong>和prototype的区别和关系？ * MDN: Object.prototype
-Object.prototype.constructor 返回创建实例对象的Object构造函数的引用。 返回值为只读的原始类型.
-这里有个关于改变对象的constructor例子, 比较特别的是, 数字, 布尔, 字符串不被改变.
- 只有 true, 1 和 &ldquo;test&rdquo; 的不受影响，因为创建他们的是只读的原生构造函数（native constructors）。
- function Type() { }; Type // ƒ Type() { } var a = []; a.constructor // ƒ Array() { [native code] } a.constructor = Type; a.constructor // ƒ Type() { } &quot;被改变&quot; var b = 666; b.
-          
-        
-      </div>
-      <div><a class="read-more button" href="/daily/2018-02-07-prototype-constructor/">更多 →</a></div>
     </div>
     
     <div class="pagination">

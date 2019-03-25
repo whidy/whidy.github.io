@@ -118,6 +118,34 @@
 
     
     <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-01-30-es6-javascript-event/">ECMAScript6入门/JS事件</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-01-01
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年1月30日 小雨 无聊
+ ECMAScript6入门 / JS事件 模板字符串(Template literals)中的标签模板  模板字符串非常棒的功能, 减少了HTML拼接的繁琐, 其中标签模板, 这个东西初看起来很奇怪, 多结合实例会好理解一些.
+以下结合MDN和ECMAScript6入门做个笔记
+标签函数的第一个参数包含一个字符串值的数组。其余的参数与表达式相关。
+ 来看看这个例子:
+let a = 5; let b = 10; tag<code>Hello ${a + b} world ${a * b}</code>; // 等同于 tag([&lsquo;Hello &lsquo;, &rsquo; world &lsquo;, &ldquo;], 15, 50);  个人理解: 简单的说, <code>Hello ${a + b} world ${a * b}</code> 会被表达式(例如: ${a + b})分割一个包含多个字符串的数组(即[&lsquo;Hello &lsquo;, &rsquo; world &lsquo;, &ldquo;]), 需要注意的是${a * b}后面还有个&rdquo;(其实似乎也可以认为有n个表达式, 就有n+1个字符串长度的数组), 而表达式部分会按顺序作为参数传入自定义的tag方法.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-01-30-es6-javascript-event/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
       <h1 class="post-title"><a href="/daily/2018-01-29-es6-function/">ECMAScript6入门/函数</a></h1>
       <div class="post-meta">
         <span class="post-date">
@@ -220,41 +248,6 @@ var is_android = true; if (is_android) { function foo() { console.log(&lsquo;I a
         
       </div>
       <div><a class="read-more button" href="/daily/2018-01-25-gatsby-strapi-mongodb/">更多 →</a></div>
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/daily/2018-01-24-gatsby-strapi-mongodb/">安装Gatsby和Strapi过程中的各种问题</a></h1>
-      <div class="post-meta">
-        <span class="post-date">
-          2018-01-01
-        </span>
-        <span class="post-author">:: whidy</span>
-      </div>
-
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            <p>2018年1月24日 阴 一般
- 安装Gatsby和Strapi VPS上安装Gatsby和Strapi中遇到的各种问题解决方案和相关记录  参考Building a static blog using Gatsby and Strapi
- 安装Gatsby  事情总是不是那么顺利.
- 根据Gatsby文档Get started, 执行到如下命令时:</p>
-
-<h1 id="gatsby-new-gatsby-site-报错-需要git-然而我的服务器没装-那就装一个吧-参考download-for-linux-and-unix执行">gatsby new gatsby-site  报错, 需要git. 然而我的服务器没装, 那就装一个吧. 参考Download for Linux and Unix执行:</h1>
-
-<h1 id="yum-install-git-再次执行后依旧报错-当前git版本1-7-1">yum install git  再次执行后依旧报错(当前git版本1.7.1)</h1>
-
-<p>error Command failed: git clone git://github.com/gatsbyjs/gatsby-starter-default.git gatsby-site &ndash;single-branch  推测是版本问题. 只好手动安装了. 于是又找到这个安装 Git</p>
-
-<h1 id="yum-install-curl-devel-expat-devel-gettext-devel-openssl-devel-zlib-devel-wget-https-www-kernel-org-pub-software-scm-git-git-2-16-1-tar-gz-tar-zxf-git-2">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel # wget <a href="https://www.kernel.org/pub/software/scm/git/git-2.16.1.tar.gz">https://www.kernel.org/pub/software/scm/git/git-2.16.1.tar.gz</a> # tar -zxf git-2.</h1>
-
-          
-        
-      </div>
-      <div><a class="read-more button" href="/daily/2018-01-24-gatsby-strapi-mongodb/">更多 →</a></div>
     </div>
     
     <div class="pagination">

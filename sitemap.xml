@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/daily/2019-03-25/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/%E5%A6%82%E4%BD%95%E7%BB%99egg.js%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%90%AF80%E7%AB%AF%E5%8F%A3%E8%AE%BF%E9%97%AE/</loc>
     <lastmod>2019-03-15T00:00:00+00:00</lastmod>
   </url>
@@ -302,7 +307,7 @@
   
   <url>
     <loc>/daily/</loc>
-    <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -319,7 +324,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

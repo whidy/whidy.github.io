@@ -118,6 +118,43 @@
 
     
     <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-17-php-upgrade-7.x/">日志</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-03
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年3月17日 阴 一般
+ 服务器相关折腾 CentOS7升级PHP7.2 我有个毛病, 就是喜欢没事搞搞优化, 本来好端端的东西, 一听说还能更好, 就止不住的折腾, 这不, 一个朋友说PHP7性能好很多(顺便查了下, PHP的性能演进(从PHP5.0到PHP7.1的性能全评测)), 我才折腾半天装的PHP5.6, 又寻思着安装到7.x, 好在一切都比较容易, 大概方法如下:
+ 在CentOS 7上官方的源是只有php5.4的, 这个大家都知道了, 于是这次又用到第三方源IUS repository.
+ 假设目前最高权限下, 这里仅介绍Apache下的更新, 还有Nginx的, 末尾有参阅文章自行查阅. 步骤如下:</p>
+
+<h1 id="cd-curl-https-setup-ius-io-o-setup-ius-sh-bash-setup-ius-sh-然后删除旧版">cd ~ # curl &lsquo;<a href="https://setup.ius.io/'">https://setup.ius.io/'</a> -o setup-ius.sh # bash setup-ius.sh  然后删除旧版</h1>
+
+<h1 id="yum-remove-php-cli-mod-php-php-common-接着安装php7-2">yum remove php-cli mod_php php-common  接着安装php7.2</h1>
+
+<h1 id="yum-install-mod-php72u-php72u-cli-php72u-mysqlnd-重新启动apache加载新的mod-php">yum install mod_php72u php72u-cli php72u-mysqlnd  重新启动Apache加载新的mod_php</h1>
+
+<h1 id="apachectl-restart-重启服务">apachectl restart  重启服务</h1>
+
+<h1 id="systemctl-status-httpd-至此升级完成">systemctl status httpd  至此升级完成~</h1>
+
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-17-php-upgrade-7.x/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
       <h1 class="post-title"><a href="/daily/2018-03-16-apache-host/">日志</a></h1>
       <div class="post-meta">
         <span class="post-date">
@@ -228,34 +265,6 @@ var arr1 = [3, 1, 2, 5, 4, 2]; var arr2 = [3, 1, 2, 5, 4, 2]; var arrLen = arr1.
         
       </div>
       <div><a class="read-more button" href="/daily/2018-02-28-javascript/">更多 →</a></div>
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/daily/2018-02-24-cssnano/">PostCSS不支持部分SASS研究</a></h1>
-      <div class="post-meta">
-        <span class="post-date">
-          2018-02-02
-        </span>
-        <span class="post-author">:: whidy</span>
-      </div>
-
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            2018年2月24日 阴 较差
- PostCSS不支持部分SASS研究 继续昨天#{$c}如何在PostCSS下得到支持 原环境下, precss插件直接编译报错, 此时&quot;precss&quot;: &quot;^2.0.0&quot;版本较低, 发现官方最新为3.1.0, 更新了, 并不会报错了, 但是编译结果是错误的. 我们回顾一下代码:
-postcss.config.js
-module.exports = { parser: &lsquo;postcss-scss&rsquo;, plugins: [ require(&lsquo;precss&rsquo;) ] };  css
-.component { $c: &amp;; padding: 2vw; &amp;<strong>card { background-color: #fff; &amp;:hover #{$c}</strong>name { color: #bada55; } } &amp;<strong>name { color: #000; } &amp;</strong>button { background-color: blue; color: #fff; } }  期望结果, 可以通过这个在线编译<a href="http://sass.js.org/测试:">http://sass.js.org/测试:</a>
-/* 此段为期望的正确结果 */ .component { padding: 2vw; } .
-          
-        
-      </div>
-      <div><a class="read-more button" href="/daily/2018-02-24-cssnano/">更多 →</a></div>
     </div>
     
     <div class="pagination">
