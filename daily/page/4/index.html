@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=""/>
+<meta name="keywords" content="whidy daily blog"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/daily/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here." />
+<meta name="twitter:description" content="" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.">
+<meta property="og:description" content="" />
+<meta property="og:url" content="/daily/" />
+<meta property="og:site_name" content="Dailies" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Whidy Daily" />
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Daily Note
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/daily">Daily📒</a></li>
+        
+      
+        
+          <li><a href="/post">Post😍</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/daily">Daily📒</a></li>
+      
+    
+      
+        <li><a href="/post">Post😍</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="posts">
+    
+    
+    
+
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-24-cssnano/">PostCSS不支持部分SASS研究</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-02
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月24日 阴 较差
+ PostCSS不支持部分SASS研究 继续昨天#{$c}如何在PostCSS下得到支持 原环境下, precss插件直接编译报错, 此时&quot;precss&quot;: &quot;^2.0.0&quot;版本较低, 发现官方最新为3.1.0, 更新了, 并不会报错了, 但是编译结果是错误的. 我们回顾一下代码:
+postcss.config.js
+module.exports = { parser: &lsquo;postcss-scss&rsquo;, plugins: [ require(&lsquo;precss&rsquo;) ] };  css
+.component { $c: &amp;; padding: 2vw; &amp;<strong>card { background-color: #fff; &amp;:hover #{$c}</strong>name { color: #bada55; } } &amp;<strong>name { color: #000; } &amp;</strong>button { background-color: blue; color: #fff; } }  期望结果, 可以通过这个在线编译<a href="http://sass.js.org/测试:">http://sass.js.org/测试:</a>
+/* 此段为期望的正确结果 */ .component { padding: 2vw; } .
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-24-cssnano/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-23-cssnano/">Wang Year of the Dog</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-02
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月23日 阴 还行
+ 狗年旺旺 开工大吉, 给各位朋友拜年. 新年技术步步高升, 事业蒸蒸日上. (说得好像有人看似的😂)
+ 一早, 领了几个红包后, 带着深深的睡意, 坚持着决定把之前写的那些技术日志粗略复习一遍. 然而, 瞌睡虫挣扎中的我&hellip;
+ 01-16 提到的#{$c}在PostCSS下无法编译 然后, 我开始测试postcss-study的DEMO中, 为什么这个SASS标准语法在此无法被支持, 如果precss不支持, 那还需要额外的什么插件呢, 测试的同时, 我又期望cssnano插件不要压缩css代码, 即不希望postcss-normalize-whitespace被执行, 尝试用Which Optimization Removes Spaces between Selectors and Brackets?写法, 多次测试都没有用. 那么目前我们需要解决的问题就有两个了.
+#{$c}如何在PostCSS下得到支持 看了好多插件测试, 没整出来&hellip;明天继续.
+如何关闭或配置cssnano的某些插件 这个问题对我目前的水平来说是一个巨大的挑战, 我本以为官方的Optimisations这里面的所有插件都可以像官方示例的这段代码来改:
+module.exports = { plugins: [ require(&lsquo;cssnano&rsquo;)({ preset: [ &lsquo;default&rsquo;, { discardComments: { removeAll: true } } ] }) ] };   如上代码, 我在插件列表中找到postcss-discard-comments, 我以为只需要删掉前缀postcss-, 并把后面部分改成驼峰写法, 然后配置成true或false, 就可以达到禁用某些插件的目的.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-23-cssnano/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-12-untitled/">Untitled</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-02
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-12-untitled/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-09-postcss-cssnano/">postcss插件cssnano</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-02
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-09-postcss-cssnano/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-08-object-call-apply/">call和apply</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-02
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月8日 晴 一般
+ 函数原型和继承学习总结  昨晚回去又看了一下JavaScript权威指南第六章, 其中提到, 1, &quot;test&quot;, true, 这类不是对象, 或者也可以当作临时对象, 书中举例var s = &quot;test&quot;, 此时可以给s一个属性, 比如s.a = 1, 但是你访问不到该属性s.a是undefined. 因为这三种是原始类型什么的- -.
+另外还有个包装对象, 好像目前看不出来有啥用. 先不看了吧- -
+今天接着看昨天没看完的内容和补充昨天的内容.
+ 昨日内容补充 Object.prototype.constructor  早上读昨天没看完的文章Basic Inheritance with JavaScript Constructors
+ 一般的通过new构造函数实现继承就不说了. 这里用call来实现(用面向对象表达)所谓的&rdquo;一个通过SuperHero类创建的marvel实例, 继承SuperHuman的方法&rdquo;的过程. 下面是合并后的代码:
+function SuperHuman(name, superPower) { this.name = name; this.superPower = superPower; } SuperHuman.prototype.usePower = function() { console.log(this.superPower + &lsquo;!&rsquo;); }; var banshee = new SuperHuman(&lsquo;Silver Banshee&rsquo;, &lsquo;sonic wail&rsquo;); function SuperHero(name, superPower) { // Reuse SuperHuman initialization SuperHuman.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-08-object-call-apply/">更多 →</a></div>
+    </div>
+    
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+      <span class="button previous">
+        <a href="/daily/page/3/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Newer posts</span>
+        </a>
+      </span>
+    
+    
+      <span class="button next">
+        <a href="/daily/page/5/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

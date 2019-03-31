@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=""/>
+<meta name="keywords" content="whidy daily blog"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/daily/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here." />
+<meta name="twitter:description" content="" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Dailies :: Whidy Daily — Here is Whidy&#39;s github note, you will find somethings here.">
+<meta property="og:description" content="" />
+<meta property="og:url" content="/daily/" />
+<meta property="og:site_name" content="Dailies" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Whidy Daily" />
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Daily Note
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/daily">Daily📒</a></li>
+        
+      
+        
+          <li><a href="/post">Post😍</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/daily">Daily📒</a></li>
+      
+    
+      
+        <li><a href="/post">Post😍</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="posts">
+    
+    
+    
+
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-17-php-upgrade-7.x/">日志</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-03
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年3月17日 阴 一般
+ 服务器相关折腾 CentOS7升级PHP7.2 我有个毛病, 就是喜欢没事搞搞优化, 本来好端端的东西, 一听说还能更好, 就止不住的折腾, 这不, 一个朋友说PHP7性能好很多(顺便查了下, PHP的性能演进(从PHP5.0到PHP7.1的性能全评测)), 我才折腾半天装的PHP5.6, 又寻思着安装到7.x, 好在一切都比较容易, 大概方法如下:
+ 在CentOS 7上官方的源是只有php5.4的, 这个大家都知道了, 于是这次又用到第三方源IUS repository.
+ 假设目前最高权限下, 这里仅介绍Apache下的更新, 还有Nginx的, 末尾有参阅文章自行查阅. 步骤如下:</p>
+
+<h1 id="cd-curl-https-setup-ius-io-o-setup-ius-sh-bash-setup-ius-sh-然后删除旧版">cd ~ # curl &lsquo;<a href="https://setup.ius.io/'">https://setup.ius.io/'</a> -o setup-ius.sh # bash setup-ius.sh  然后删除旧版</h1>
+
+<h1 id="yum-remove-php-cli-mod-php-php-common-接着安装php7-2">yum remove php-cli mod_php php-common  接着安装php7.2</h1>
+
+<h1 id="yum-install-mod-php72u-php72u-cli-php72u-mysqlnd-重新启动apache加载新的mod-php">yum install mod_php72u php72u-cli php72u-mysqlnd  重新启动Apache加载新的mod_php</h1>
+
+<h1 id="apachectl-restart-重启服务">apachectl restart  重启服务</h1>
+
+<h1 id="systemctl-status-httpd-至此升级完成">systemctl status httpd  至此升级完成~</h1>
+
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-17-php-upgrade-7.x/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-16-apache-host/">日志</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-03
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            <p>2018年3月16日 阴 一般
+ 博客转移/域名解析/其他配置 域名解析, 全部设置为A记录指向服务器IP, 然后还是用原来的301转向, (www.)whidy.cn和whidy.net全部跳转到www.whidy.net.
+Apache服务器优化 Rewrite模块 为了伪静态页面和301重定向, 这边文章讲得很清楚了Install and Configure mod_rewrite for Apache on CentOS 7
+开启Gzip压缩功能 方案一: 修改httpd.conf配置 如上文: 打开这个文件</p>
+
+<h1 id="nano-etc-httpd-conf-modules-d-00-base-conf-检查mod-deflate-module是否正常开启-默认是开启的">nano /etc/httpd/conf.modules.d/00-base.conf  检查mod_deflate module是否正常开启(默认是开启的)</h1>
+
+<p>LoadModule deflate_module modules/mod_deflate.so  然后修改httpd.conf</p>
+
+<h1 id="nano-etc-httpd-conf-httpd-conf-文件末尾增加">nano /etc/httpd/conf/httpd.conf  文件末尾增加</h1>
+
+<p>AddOutputFilterByType DEFLATE text/plain AddOutputFilterByType DEFLATE text/html AddOutputFilterByType DEFLATE text/xml AddOutputFilterByType DEFLATE text/css AddOutputFilterByType DEFLATE application/xml AddOutputFilterByType DEFLATE application/xhtml+xml AddOutputFilterByType DEFLATE application/rss+xml AddOutputFilterByType DEFLATE application/javascript AddOutputFilterByType DEFLATE application/x-javascript  重启服务</p>
+
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-16-apache-host/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-15-note/">日志</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-03
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-15-note/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-03-06-weapp/">微信小程序开发中的问题</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-03
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年3月6日 阴 一般
+ 最近比较忙 转到新部门了，熟悉新业务，最近也就没有什么笔记了。另外最近接了一个新任务，开发一项公司内部的小程序应用，于是这几天主要就是看小程序，接下来的一些笔记应该是主要关于微信小程序的开发笔记。
+开发文档: <a href="https://mp.weixin.qq.com/debug/wxadoc/dev/">https://mp.weixin.qq.com/debug/wxadoc/dev/</a>
+模块化<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/module.html">https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/module.html</a>  exports 是 module.exports 的一个引用，因此在模块里边随意更改 exports 的指向会造成未知的错误。所以更推荐开发者采用 module.exports 来暴露模块接口，除非你已经清晰知道这两者的关系
+ 那么exports和module.exports的区别是什么呢?(以下内容有误, 请不要阅读)
+根据我的阅读研究和分析, 标准规范上来说, 将一个js文件的对象对外暴露出去, 一般是使用module.exports的, 这样另一个文件require的时候, 就可以直接使用了, 例如
+//b.js var test = (name) =&gt; { console.log(&lsquo;hi &rsquo; + name); } module.exports = { foo: test, bar: &lsquo;bar&rsquo; }; exports.foo = name =&gt; { console.log(&lsquo;hi &rsquo; + name + &lsquo; by exports&rsquo;); }; exports.foo(&lsquo;hello&rsquo;);  //a.js const test = require(&lsquo;.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-03-06-weapp/">更多 →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/daily/2018-02-28-javascript/">复习</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-02-02
+        </span>
+        <span class="post-author">:: whidy</span>
+      </div>
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            2018年2月28日 晴 一般
+ 面试题小试  前天晚上发烧, 不舒服, 然后迷迷糊糊上了一天班. 昨天有个群友面试, 主要是ES5, 关于变量提升, 原型继承, 还有两个关于算法的, 一个排序, 一个数组去重, 于是做了一下, 顺便也看了其他的面试题.
+ 题一: 输出6个5;
+题二: chrome下, 依次输出2 4 1 2 3 3, node环境下第3个报错.
+题三: 我思路很清楚, 貌似代码写起来不是很利索, 写完了最常见的, 想起还有个方案, 不过还是第一个次数少一点. (为了示例搞了两个数组)
+var arr1 = [3, 1, 2, 5, 4, 2]; var arr2 = [3, 1, 2, 5, 4, 2]; var arrLen = arr1.length; var counter = 0; var mySort = { way1: function(arr) { counter = 0; var i = (j = 0), temp; while (i &lt; arrLen) { j = i + 1; while (j &lt; arrLen) { counter++; if (arr[i] - arr[j] &gt; 0) { temp = arr[i]; arr[i] = arr[j]; arr[j] = temp; } j++; } i++; } }, way2: function(arr) { counter = 0; var i = (j = 0), temp; while (i &lt; arrLen) { j = 0; while (j &lt; arrLen - 1) { if (arr[j] - arr[j + 1] &gt; 0) { temp = arr[j]; arr[j] = arr[j + 1]; arr[j + 1] = temp; } j++; counter++; } i++; } } }; mySort.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/daily/2018-02-28-javascript/">更多 →</a></div>
+    </div>
+    
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+      <span class="button previous">
+        <a href="/daily/page/2/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Newer posts</span>
+        </a>
+      </span>
+    
+    
+      <span class="button next">
+        <a href="/daily/page/4/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

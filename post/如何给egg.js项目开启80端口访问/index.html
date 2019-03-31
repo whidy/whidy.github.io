@@ -11,11 +11,10 @@
  如何做 这里有几个方案，供君参考：
 修改package.json 跑哪个命令就在这个命令后面加--port=80，例如：
 &amp;quot;start&amp;quot;: &amp;quot;egg-scripts start --daemon --title=egg-server-51la-web-egg --workers=2 --port=80&amp;quot;, ...  dev同理。
-配置config.local.js 如果没有这个文件自己创建一个，当然这个对应的是开发模式下使用。
-部分配置如下：
-&#39;use strict&#39;; module.exports = app =&amp;gt; { const exports = {}; exports.cluster = { listen: { port: 80, hostname: &#39;127.0.0.1&#39;, }, }; return exports; };  Nginx大法 比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节：
- 部署  Warning 如果你不看这部分，很遗憾，你肯定跑不起来。你可能会遇到下面这些异常情况：
-ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, signal: null, suicide: false, state: dead), current workers: []  原因是Node."/>
+配置config.default.js 部分配置如下：
+&#39;use strict&#39;; module.exports = app =&amp;gt; { const exports = {}; exports.cluster = { listen: { port: 80, hostname: &#39;127.0.0.1&#39;, }, }; return exports; };  以上方法都适用于执行egg-scripts时有效（例如npm start）。如果需要执行npm run dev，开启，请参考上文修改package.json的方案。
+ 我最初通过设置config.local.js来实现，发现竟然不成功，报错！报错信息部分如下：
+&amp;gt; [egg-scripts] 2019-03-20 14:30:48,033 ERROR 7988 [app_worker] server got error: bind EADDRINUSE null:7001, code: EADDRINUSE &amp;gt; ``` ### Nginx大法 比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节： * [部署](https://eggjs."/>
 <meta name="keywords" content="whidy daily blog"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="/post/%E5%A6%82%E4%BD%95%E7%BB%99egg.js%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%90%AF80%E7%AB%AF%E5%8F%A3%E8%AE%BF%E9%97%AE/" />
@@ -41,11 +40,10 @@ ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, 
  如何做 这里有几个方案，供君参考：
 修改package.json 跑哪个命令就在这个命令后面加--port=80，例如：
 &amp;quot;start&amp;quot;: &amp;quot;egg-scripts start --daemon --title=egg-server-51la-web-egg --workers=2 --port=80&amp;quot;, ...  dev同理。
-配置config.local.js 如果没有这个文件自己创建一个，当然这个对应的是开发模式下使用。
-部分配置如下：
-&#39;use strict&#39;; module.exports = app =&amp;gt; { const exports = {}; exports.cluster = { listen: { port: 80, hostname: &#39;127.0.0.1&#39;, }, }; return exports; };  Nginx大法 比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节：
- 部署  Warning 如果你不看这部分，很遗憾，你肯定跑不起来。你可能会遇到下面这些异常情况：
-ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, signal: null, suicide: false, state: dead), current workers: []  原因是Node." />
+配置config.default.js 部分配置如下：
+&#39;use strict&#39;; module.exports = app =&amp;gt; { const exports = {}; exports.cluster = { listen: { port: 80, hostname: &#39;127.0.0.1&#39;, }, }; return exports; };  以上方法都适用于执行egg-scripts时有效（例如npm start）。如果需要执行npm run dev，开启，请参考上文修改package.json的方案。
+ 我最初通过设置config.local.js来实现，发现竟然不成功，报错！报错信息部分如下：
+&amp;gt; [egg-scripts] 2019-03-20 14:30:48,033 ERROR 7988 [app_worker] server got error: bind EADDRINUSE null:7001, code: EADDRINUSE &amp;gt; ``` ### Nginx大法 比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节： * [部署](https://eggjs." />
 <meta name="twitter:site" content="/" />
 <meta name="twitter:creator" content="whidy" />
 <meta name="twitter:image" content="">
@@ -59,11 +57,10 @@ ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, 
  如何做 这里有几个方案，供君参考：
 修改package.json 跑哪个命令就在这个命令后面加--port=80，例如：
 &amp;quot;start&amp;quot;: &amp;quot;egg-scripts start --daemon --title=egg-server-51la-web-egg --workers=2 --port=80&amp;quot;, ...  dev同理。
-配置config.local.js 如果没有这个文件自己创建一个，当然这个对应的是开发模式下使用。
-部分配置如下：
-&#39;use strict&#39;; module.exports = app =&amp;gt; { const exports = {}; exports.cluster = { listen: { port: 80, hostname: &#39;127.0.0.1&#39;, }, }; return exports; };  Nginx大法 比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节：
- 部署  Warning 如果你不看这部分，很遗憾，你肯定跑不起来。你可能会遇到下面这些异常情况：
-ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, signal: null, suicide: false, state: dead), current workers: []  原因是Node." />
+配置config.default.js 部分配置如下：
+&#39;use strict&#39;; module.exports = app =&amp;gt; { const exports = {}; exports.cluster = { listen: { port: 80, hostname: &#39;127.0.0.1&#39;, }, }; return exports; };  以上方法都适用于执行egg-scripts时有效（例如npm start）。如果需要执行npm run dev，开启，请参考上文修改package.json的方案。
+ 我最初通过设置config.local.js来实现，发现竟然不成功，报错！报错信息部分如下：
+&amp;gt; [egg-scripts] 2019-03-20 14:30:48,033 ERROR 7988 [app_worker] server got error: bind EADDRINUSE null:7001, code: EADDRINUSE &amp;gt; ``` ### Nginx大法 比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节： * [部署](https://eggjs." />
 <meta property="og:url" content="/post/%E5%A6%82%E4%BD%95%E7%BB%99egg.js%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%90%AF80%E7%AB%AF%E5%8F%A3%E8%AE%BF%E9%97%AE/" />
 <meta property="og:site_name" content="如何给Egg.js项目开启80端口访问" />
 <meta property="og:image" content="">
@@ -106,7 +103,11 @@ ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, 
     
       
         
-          <li><a href="/daily">Daily</a></li>
+          <li><a href="/daily">Daily📒</a></li>
+        
+      
+        
+          <li><a href="/post">Post😍</a></li>
         
       
       
@@ -116,7 +117,11 @@ ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, 
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/daily">Daily</a></li>
+        <li><a href="/daily">Daily📒</a></li>
+      
+    
+      
+        <li><a href="/post">Post😍</a></li>
       
     
   </ul>
@@ -168,9 +173,7 @@ ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, 
 
 <p>dev同理。</p>
 
-<h3 id="配置config-local-js">配置config.local.js</h3>
-
-<p>如果没有这个文件自己创建一个，当然这个对应的是开发模式下使用。</p>
+<h3 id="配置config-default-js">配置config.default.js</h3>
 
 <p>部分配置如下：</p>
 
@@ -187,39 +190,52 @@ module.exports = app =&gt; {
 };
 </code></pre>
 
-<h3 id="nginx大法">Nginx大法</h3>
+<p>以上方法都适用于执行<code>egg-scripts</code>时有效（例如<code>npm start</code>）。如果需要执行<code>npm run dev</code>，开启，请参考上文<strong>修改package.json</strong>的方案。</p>
 
-<p>比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节：</p>
+<blockquote>
+<p>我最初通过设置<code>config.local.js</code>来实现，发现竟然不成功，报错！报错信息部分如下：</p>
 
-<ul>
-<li><a href="https://eggjs.org/zh-cn/tutorials/socketio.html#%E9%83%A8%E7%BD%B2">部署</a></li>
-</ul>
+<pre><code>&gt; [egg-scripts] 2019-03-20 14:30:48,033 ERROR 7988 [app_worker] server got error: bind EADDRINUSE null:7001, code: EADDRINUSE
+&gt; ```
 
-<h2 id="warning">Warning</h2>
+### Nginx大法
 
-<p>如果你不看这部分，很遗憾，你肯定跑不起来。你可能会遇到下面这些异常情况：</p>
+比较麻烦，不过看了下官方文档，应该也是可以很好的支持的。有兴趣请阅读该节：
 
-<pre><code>ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, signal: null, suicide: false, state: dead), current workers: []
+* [部署](https://eggjs.org/zh-cn/tutorials/socketio.html#%E9%83%A8%E7%BD%B2)
+
+## Warning
+
+如果你不看这部分，很遗憾，你肯定跑不起来。你可能会遇到下面这些异常情况：
+
 </code></pre>
 
-<p>原因是Node.js的服务器端默认是无法使用1024以下的端口的。咋办呢？使用<code>sudo</code>哈哈哈。就是这样：<code>sudo npm start</code>或者<code>sodu npm run dev</code>。</p>
+<p>ERROR 3810 nodejs.AppWorkerDiedError: [master] app_worker#1:3813 died (code: 0, signal: null, suicide: false, state: dead), current workers: []</p>
 
-<p>也有可能是：</p>
+<pre><code>
+原因是Node.js的服务器端默认是无法使用1024以下的端口的。咋办呢？使用`sudo`哈哈哈。就是这样：`sudo npm start`或者`sudo npm run dev`。
 
-<pre><code>ERROR 3709 [app_worker] server got error: bind EADDRINUSE null:80, code: EADDRINUSE
+也有可能是：
+
 </code></pre>
 
-<p>端口被占用了！node.js的server服务无法在ctrl+c后立刻终止。比如默认7001未能正常关闭，通过<code>config.local.js
-</code>文件修改的80端口也没有能够生效，每次启动服务都是启动了新的端口<code>7002</code>，此时：需要查出占用<code>7001</code>的端口的<code>pid</code>，将它终止。操作效果大致如下：</p>
+<p>ERROR 3709 [app_worker] server got error: bind EADDRINUSE null:80, code: EADDRINUSE</p>
 
-<pre><code>P750TM:51la-web-egg whidy$ lsof -i:7001
+<pre><code>
+端口被占用了！node.js的server服务无法在ctrl+c后立刻终止。比如默认7001未能正常关闭，通过`config.local.js
+`文件修改的80端口也没有能够生效，每次启动服务都是启动了新的端口`7002`，此时：需要查出占用`7001`的端口的`pid`，将它终止。操作效果大致如下：
+
+</code></pre>
+
+<p>P750TM:51la-web-egg whidy$ lsof -i:7001
 COMMAND  PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
 node    2982 whidy   25u  IPv6 0x2f7a1da313a05e4d      0t0  TCP *:afs3-callback (LISTEN)
 P750TM:51la-web-egg whidy$ kill
-kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec &hellip; or kill -l [sigspec]
 P750TM:51la-web-egg whidy$ kill 2982
 P750TM:51la-web-egg whidy$ lsof -i:7001
-</code></pre>
+```</p>
+</blockquote>
 
 <p>上面用到两个命令：<code>lsof -i:[端口号]</code>，<code>kill [进程的PID]</code>，最后重新查询7001就没有任何返回，说明Ok了，再次执行<code>sudo npm run dev</code>，那么就很好的使用80端口了。</p>
 
