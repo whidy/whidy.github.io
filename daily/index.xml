@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dailies on Whidy Daily</title>
-    <link>/daily/</link>
+    <link>https://whidy.github.io/daily/</link>
     <description>Recent content in Dailies on Whidy Daily</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/daily/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://whidy.github.io/daily/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Chrome的Vue工具查看Vuex的State状态BUG</title>
-      <link>/daily/2019-03-25/</link>
+      <link>https://whidy.github.io/daily/2019-03-25/</link>
       <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2019-03-25/</guid>
+      <guid>https://whidy.github.io/daily/2019-03-25/</guid>
       <description>2019年03月25日 雨 不太好
  在大型项目中，需要用到Vuex模块化，我发现在设置模块动态注册和卸载的时候，使用Chrome的Vue插件工具来观察State，发现了一个问题。
 当你卸载模块的时候，state中被卸载的模块并不会立刻被删除（实际上是没有更新的），导致我误以为删除失败了，后来经过多一次路由跳转才发现，其实已经成功卸载了，并且该数据已经不存在了。
@@ -25,10 +25,10 @@
     
     <item>
       <title>Nuxt在SPA模式下的鉴权处理(1)</title>
-      <link>/daily/2018-06-05-nuxt-auth/</link>
+      <link>https://whidy.github.io/daily/2018-06-05-nuxt-auth/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-06-05-nuxt-auth/</guid>
+      <guid>https://whidy.github.io/daily/2018-06-05-nuxt-auth/</guid>
       <description>2018年6月5日 阴雨 一般
 最近项目使用了Nuxt, 不过由于考虑到项目需要快速上线, 放弃了SSR, 直接采用单页面SPA模式进行开发, 也是本人第一次使用Nuxt来进行项目开发, 以下是我开发中对于鉴权这块的研究和总结, 因为官方给了一个鉴权示例是基于Server端的, 所以我就又写了一篇Client端的鉴权总结~
 文章分为很多篇, 会逐步完善更新, 请耐心等待&amp;hellip;
@@ -44,10 +44,10 @@
     
     <item>
       <title>Vue中Axios请求数据渲染研究</title>
-      <link>/daily/2018-04-16-vue-axios/</link>
+      <link>https://whidy.github.io/daily/2018-04-16-vue-axios/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-04-16-vue-axios/</guid>
+      <guid>https://whidy.github.io/daily/2018-04-16-vue-axios/</guid>
       <description>2018年4月16日 雨 一般
  Vue中Axios请求数据渲染研究  整整半个月没有写东西了, 因为在做小程序和Vue的项目, 边学习边开发. 完全没时间来写比较完整的笔记和日志了, 因此也就停了一段时间~
  因为写Vue页面有一些网络请求很慢, 也不记得那里说data里面初始化数据最好用null, 所以造成渲染页面报错, 虽然接口返回后页面会正常显示, 但是面对程序逻辑, 我认为这是不合理的&amp;hellip; 请教了公司同事文君兄, 给出了一个方案, 关于vue的axios
@@ -60,10 +60,10 @@ https://alligator.io/vuejs/implementing-infinite-scroll/
     
     <item>
       <title>shadowsocks-manager搭建</title>
-      <link>/daily/2018-04-01-shadowsocksmanager/</link>
+      <link>https://whidy.github.io/daily/2018-04-01-shadowsocksmanager/</link>
       <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-04-01-shadowsocksmanager/</guid>
+      <guid>https://whidy.github.io/daily/2018-04-01-shadowsocksmanager/</guid>
       <description>2018年4月1日 晴 一般
  shadowsocks-manager搭建  该文章仅作为日志记录一下, 因为工作原因, 或者个人原因吧, 会习惯使用谷歌去查找技术资料, 所以shadowsocks在工作生活中必不可少, 之前买了个国外的服务器, 一直用着不错, 也有几个比较好的朋友想要买我的这个梯子, 于是就搭建了一个官方的管理平台.
  以下内容主要参阅: WebGUI
@@ -75,10 +75,10 @@ https://alligator.io/vuejs/implementing-infinite-scroll/
     
     <item>
       <title>日志</title>
-      <link>/daily/2018-03-29-note/</link>
+      <link>https://whidy.github.io/daily/2018-03-29-note/</link>
       <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-29-note/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-29-note/</guid>
       <description>  2018年3月29日 晴 一般
  日志 1px像素在html5上的解决方案 最近vue做项目, 做HTML5的页面, 又陷入1px边框问题, 好气啊!!!
 https://www.w3cplus.com/mobile/vw-layout-in-vue.html
@@ -92,10 +92,10 @@ http://mp.weixin.qq.com/s/fcqOvzPE0swwsJL1Po4twA
     
     <item>
       <title>日志</title>
-      <link>/daily/2018-03-26-note/</link>
+      <link>https://whidy.github.io/daily/2018-03-26-note/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-26-note/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-26-note/</guid>
       <description>2018年3月26日 阴 一般
  日志 搭建移动端网站架子  Vue + mint-ui
  # 全局安装 vue-cli $ npm install --global vue-cli # 创建一个基于 webpack 模板的新项目 $ vue init webpack 51la-mpa # 安装依赖，走你 $ cd 51la-mpa $ npm install $ npm run dev  其中安装过程中, 根据个人需要, 配置选择如下
@@ -104,10 +104,10 @@ http://mp.weixin.qq.com/s/fcqOvzPE0swwsJL1Po4twA
     
     <item>
       <title>Nginx的站点配置/PHP-FPM配置</title>
-      <link>/daily/2018-03-22-nginx-phpfpm/</link>
+      <link>https://whidy.github.io/daily/2018-03-22-nginx-phpfpm/</link>
       <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-22-nginx-phpfpm/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-22-nginx-phpfpm/</guid>
       <description>2018年3月22日 晴 一般
  Nginx的站点配置/PHP-FPM配置 22号是艰难的一天. 各种爆炸!
 Nginx的站点配置  昨晚, 回去看了一下百度统计, 一下子就炸了. 在我还不了解Nginx配置的情况下, 我只是让首页正常访问了&amp;hellip; 其他页面全挂. 于是开始了大量英文资料的阅读.
@@ -119,10 +119,10 @@ Nginx的站点配置  昨晚, 回去看了一下百度统计, 一下子就炸了
     
     <item>
       <title>Wordpress改用Nginx</title>
-      <link>/daily/2018-03-21-nginx/</link>
+      <link>https://whidy.github.io/daily/2018-03-21-nginx/</link>
       <pubDate>Wed, 21 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-21-nginx/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-21-nginx/</guid>
       <description>2018年3月21日 晴 一般
  博客改用Nginx  接昨晚, 从Apache换成Nginx, 本来是很简单的. 但是基于我的有点点特殊, 考虑到操作的正确性, 我完整的做了一份记录.
  删除Apache及对应的PHP 之前2018-03-17-php-upgrade-7.x有提到的, 我不确定Nginx跟部分PHP有关联, 因此保险起见, 我将同Apache一并安装的PHP也删了, 因为安装高版本PHP需要用到第三方源IUS, 因此再次执行如下命令
@@ -134,10 +134,10 @@ $ sudo yum remove httpd  安装Nginx及PHP 我们要开始正是安装Nginx啦</
     
     <item>
       <title>MariaDB崩溃分析/Wordpress改用Nginx</title>
-      <link>/daily/2018-03-20-mariadb/</link>
+      <link>https://whidy.github.io/daily/2018-03-20-mariadb/</link>
       <pubDate>Tue, 20 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-20-mariadb/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-20-mariadb/</guid>
       <description>2018年3月20日 阴晴 一般
  MariaDB崩溃分析/博客改用Nginx  最近SB哥们在我服务器上面做hadoop实验, 结果搞得我博客总是崩溃, 之前以为是偶然现象或者是被攻击, 目前看来是服务器配置低了😭, 毕竟是白菜服务器.
  博客崩溃修复小结 昨天很忙, 一直在处理微信授权的逻辑合理性和体验, 尽早发现博客又挂了, 初步检测是MariaDB挂了, 原因尚不明确.
@@ -147,10 +147,10 @@ $ sudo yum remove httpd  安装Nginx及PHP 我们要开始正是安装Nginx啦</
     
     <item>
       <title>CentOS7安装Jekyll和Rails</title>
-      <link>/daily/2018-03-18-jekyll-ruby-rails-linux-weapp/</link>
+      <link>https://whidy.github.io/daily/2018-03-18-jekyll-ruby-rails-linux-weapp/</link>
       <pubDate>Sun, 18 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-18-jekyll-ruby-rails-linux-weapp/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-18-jekyll-ruby-rails-linux-weapp/</guid>
       <description>2018年3月18日 阴 一般
  CentOS7安装Jekyll/Rails/Linux用户管理/微信小程序页面加载问题  打算把我的wordpress博客移植到Jekyll上面, 于是试了下, 之前有在国外的VPS搭过一个Jekyll站点http://daily.whidy.net/, 纯静态的感觉很棒, 因此尝试一下移植的效果~
  CentOS7下安装Jekyll环境搭建 安装Jekyll需要  Ruby RubyGems NodeJS Python 2.7(Whidy比较懒, 貌似CentOS7自带? 还是啥时候装了, 不会的自己搜一下= =.)  安装Ruby2.5.0和RubyGems  目前最新稳定版本是2.5.0, CentOS自带源的版本比较老, 我们需要第三方源rbenv来安装最新稳定版, 安装方法如下:
@@ -161,10 +161,10 @@ $ sudo yum remove httpd  安装Nginx及PHP 我们要开始正是安装Nginx啦</
     
     <item>
       <title>日志</title>
-      <link>/daily/2018-03-17-php-upgrade-7.x/</link>
+      <link>https://whidy.github.io/daily/2018-03-17-php-upgrade-7.x/</link>
       <pubDate>Sat, 17 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-17-php-upgrade-7.x/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-17-php-upgrade-7.x/</guid>
       <description>2018年3月17日 阴 一般
  服务器相关折腾 CentOS7升级PHP7.2 我有个毛病, 就是喜欢没事搞搞优化, 本来好端端的东西, 一听说还能更好, 就止不住的折腾, 这不, 一个朋友说PHP7性能好很多(顺便查了下, PHP的性能演进(从PHP5.0到PHP7.1的性能全评测)), 我才折腾半天装的PHP5.6, 又寻思着安装到7.x, 好在一切都比较容易, 大概方法如下:
  在CentOS 7上官方的源是只有php5.4的, 这个大家都知道了, 于是这次又用到第三方源IUS repository.
@@ -178,10 +178,10 @@ $ sudo yum remove httpd  安装Nginx及PHP 我们要开始正是安装Nginx啦</
     
     <item>
       <title>日志</title>
-      <link>/daily/2018-03-16-apache-host/</link>
+      <link>https://whidy.github.io/daily/2018-03-16-apache-host/</link>
       <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-16-apache-host/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-16-apache-host/</guid>
       <description>2018年3月16日 阴 一般
  博客转移/域名解析/其他配置 域名解析, 全部设置为A记录指向服务器IP, 然后还是用原来的301转向, (www.)whidy.cn和whidy.net全部跳转到www.whidy.net.
 Apache服务器优化 Rewrite模块 为了伪静态页面和301重定向, 这边文章讲得很清楚了Install and Configure mod_rewrite for Apache on CentOS 7
@@ -194,10 +194,10 @@ AddOutputFilterByType DEFLATE text/plain AddOutputFilterByType DEFLATE text/html
     
     <item>
       <title>日志</title>
-      <link>/daily/2018-03-15-note/</link>
+      <link>https://whidy.github.io/daily/2018-03-15-note/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-15-note/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-15-note/</guid>
       <description>2018年3月15日 阴 一般
  日志 前阵子家里有点事情回去了将近一周, 也忙于工作上的各种事情， 做小程序的过程中遇到了很多问题. 然后这几天又急着要一个页面, 在另一个同事帮助下用vue开发, 今天算多日没有写日志的打卡记录吧.
 微信授权 获取openid的方法, 官方文档: https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html
@@ -211,10 +211,10 @@ http://blog.leapoahead.com/2015/09/06/understanding-jwt/
     
     <item>
       <title>微信小程序开发中的问题</title>
-      <link>/daily/2018-03-06-weapp/</link>
+      <link>https://whidy.github.io/daily/2018-03-06-weapp/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-03-06-weapp/</guid>
+      <guid>https://whidy.github.io/daily/2018-03-06-weapp/</guid>
       <description>2018年3月6日 阴 一般
  最近比较忙 转到新部门了，熟悉新业务，最近也就没有什么笔记了。另外最近接了一个新任务，开发一项公司内部的小程序应用，于是这几天主要就是看小程序，接下来的一些笔记应该是主要关于微信小程序的开发笔记。
 开发文档: https://mp.weixin.qq.com/debug/wxadoc/dev/
@@ -226,10 +226,10 @@ http://blog.leapoahead.com/2015/09/06/understanding-jwt/
     
     <item>
       <title>复习</title>
-      <link>/daily/2018-02-28-javascript/</link>
+      <link>https://whidy.github.io/daily/2018-02-28-javascript/</link>
       <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-28-javascript/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-28-javascript/</guid>
       <description>2018年2月28日 晴 一般
  面试题小试  前天晚上发烧, 不舒服, 然后迷迷糊糊上了一天班. 昨天有个群友面试, 主要是ES5, 关于变量提升, 原型继承, 还有两个关于算法的, 一个排序, 一个数组去重, 于是做了一下, 顺便也看了其他的面试题.
  题一: 输出6个5;
@@ -240,10 +240,10 @@ var arr1 = [3, 1, 2, 5, 4, 2]; var arr2 = [3, 1, 2, 5, 4, 2]; var arrLen = arr1.
     
     <item>
       <title>PostCSS不支持部分SASS研究</title>
-      <link>/daily/2018-02-24-cssnano/</link>
+      <link>https://whidy.github.io/daily/2018-02-24-cssnano/</link>
       <pubDate>Sat, 24 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-24-cssnano/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-24-cssnano/</guid>
       <description>2018年2月24日 阴 较差
  PostCSS不支持部分SASS研究 继续昨天#{$c}如何在PostCSS下得到支持 原环境下, precss插件直接编译报错, 此时&amp;quot;precss&amp;quot;: &amp;quot;^2.0.0&amp;quot;版本较低, 发现官方最新为3.1.0, 更新了, 并不会报错了, 但是编译结果是错误的. 我们回顾一下代码:
 postcss.config.js
@@ -254,10 +254,10 @@ module.exports = { parser: &#39;postcss-scss&#39;, plugins: [ require(&#39;precs
     
     <item>
       <title>Wang Year of the Dog</title>
-      <link>/daily/2018-02-23-cssnano/</link>
+      <link>https://whidy.github.io/daily/2018-02-23-cssnano/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-23-cssnano/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-23-cssnano/</guid>
       <description>2018年2月23日 阴 还行
  狗年旺旺 开工大吉, 给各位朋友拜年. 新年技术步步高升, 事业蒸蒸日上. (说得好像有人看似的😂)
  一早, 领了几个红包后, 带着深深的睡意, 坚持着决定把之前写的那些技术日志粗略复习一遍. 然而, 瞌睡虫挣扎中的我&amp;hellip;
@@ -269,10 +269,10 @@ module.exports = { plugins: [ require(&#39;cssnano&#39;)({ preset: [ &#39;defaul
     
     <item>
       <title>Untitled</title>
-      <link>/daily/2018-02-12-untitled/</link>
+      <link>https://whidy.github.io/daily/2018-02-12-untitled/</link>
       <pubDate>Mon, 12 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-12-untitled/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-12-untitled/</guid>
       <description>2018年2月12日 晴 一般
  无题 前几天电脑重装WIN10, 由于硬件过旧, 引导兼容性不好, 搞了很久才装好, 然后9号晚上硬盘暴毙, 数据丢失, 折腾几日无效.
 另外最近忙着帮朋友改点琐碎的毫无技术含量的令人厌恶的页面. 也就耽搁了学习.
@@ -282,10 +282,10 @@ module.exports = { plugins: [ require(&#39;cssnano&#39;)({ preset: [ &#39;defaul
     
     <item>
       <title>postcss插件cssnano</title>
-      <link>/daily/2018-02-09-postcss-cssnano/</link>
+      <link>https://whidy.github.io/daily/2018-02-09-postcss-cssnano/</link>
       <pubDate>Fri, 09 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-09-postcss-cssnano/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-09-postcss-cssnano/</guid>
       <description>  2018年2月9日 阴 一般
  postcss插件cssnano 早上看到SegmentFault上有个人请教一个关于插件编译错误的回复https://segmentfault.com/a/1190000010947054, 引起了我的好奇, 我便看了下.
 关于postcss-neat插件使用报错的问题. 我自己测试了一下, 是跟其他的插件有冲突. 后来又发现他发了个提问, 我也顺手回答了postcss-salad 在用栅格 布局的时候报错？
@@ -295,10 +295,10 @@ module.exports = { plugins: [ require(&#39;cssnano&#39;)({ preset: [ &#39;defaul
     
     <item>
       <title>call和apply</title>
-      <link>/daily/2018-02-08-object-call-apply/</link>
+      <link>https://whidy.github.io/daily/2018-02-08-object-call-apply/</link>
       <pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-08-object-call-apply/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-08-object-call-apply/</guid>
       <description>2018年2月8日 晴 一般
  函数原型和继承学习总结  昨晚回去又看了一下JavaScript权威指南第六章, 其中提到, 1, &amp;quot;test&amp;quot;, true, 这类不是对象, 或者也可以当作临时对象, 书中举例var s = &amp;quot;test&amp;quot;, 此时可以给s一个属性, 比如s.a = 1, 但是你访问不到该属性s.a是undefined. 因为这三种是原始类型什么的- -.
 另外还有个包装对象, 好像目前看不出来有啥用. 先不看了吧- -
@@ -310,10 +310,10 @@ function SuperHuman(name, superPower) { this.name = name; this.superPower = supe
     
     <item>
       <title>函数原型和继承学习总结</title>
-      <link>/daily/2018-02-07-prototype-constructor/</link>
+      <link>https://whidy.github.io/daily/2018-02-07-prototype-constructor/</link>
       <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-07-prototype-constructor/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-07-prototype-constructor/</guid>
       <description>2018年2月7日 晴 一般
  函数原型和继承学习总结 Object.prototype JS一切皆对象, 对象都具有内置属性[[prototype]](也可用__proto__表示). 每个函数创建后拥有名为prototype的属性, 它又有一个constructor, 有个例外: 通过Function.prototype.bind方法构造出来的函数没有prototype属性。
 偷了一张图doris的回答:
@@ -326,10 +326,10 @@ Object.prototype.constructor 返回创建实例对象的Object构造函数的引
     
     <item>
       <title>ECMAScript6入门</title>
-      <link>/daily/2018-02-06-es6-function/</link>
+      <link>https://whidy.github.io/daily/2018-02-06-es6-function/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-06-es6-function/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-06-es6-function/</guid>
       <description>2018年2月6日 晴 一般
  ECMAScript6入门 今天肚子不舒服状态不佳, 粗略的把第6.数值的扩展看完了. 感觉就是Math相关方法太多了, 我肯定记不住了.大概留点印象吧.
 函数的扩展 然后接着看7.函数的扩展
@@ -338,10 +338,10 @@ Object.prototype.constructor 返回创建实例对象的Object构造函数的引
     
     <item>
       <title>replace和exec函数</title>
-      <link>/daily/2018-02-05-replace-exec/</link>
+      <link>https://whidy.github.io/daily/2018-02-05-replace-exec/</link>
       <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-05-replace-exec/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-05-replace-exec/</guid>
       <description>2018年2月5日 晴 一般
  replace和exec函数  不好意思我还在看正则部分, 才发现replace函数一点也不简单.
  语法 str.replace(regexp|substr, newSubStr|function)  使用字符串作为参数  变量名 | 代表的值 $$ | 插入一个 &amp;ldquo;$&amp;ldquo;。 $&amp;amp; | 插入匹配的子串。 $` | 插入当前匹配的子串左边的内容。 $&#39; | 插入当前匹配的子串右边的内容。 $n | 假如第一个参数是 RegExp对象，并且 n 是个小于100的非负整数，那么插入第 n 个括号匹配的字符串。  这个表格除了$n之前用过其他的全部没用过. 也一下没看懂, 写了几段demo, 算是明白了- -, 不过应用场景还不太了解.
@@ -350,10 +350,10 @@ let str = &#39;123abcXYZ&#39;; console.log(str.replace(/ab/, &#39;-$$-&#39;)); /
     
     <item>
       <title>PostCSS中让CSS文件支持SCSS语法/postcss-cssnext和precss的区别和选择</title>
-      <link>/daily/2018-02-02-postcss/</link>
+      <link>https://whidy.github.io/daily/2018-02-02-postcss/</link>
       <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-02-postcss/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-02-postcss/</guid>
       <description>2018年2月2日 晴 一般
  PostCSS相关研究  昨天下班的时候看到一篇PostCSS — beyond the Autoprefixer跟PostCSS的文章, 提取了我的兴趣, 没来得及看, 粗读了一下, 让我想起之前有个疑惑的问题, PostCSS的众多插件, 很多功能有相似之处, 到底要怎么应用在项目中呢?
 另外, 昨天下班后在SegmentFault上面看到一个提问: vscode使用postcss，如何才能不对css的嵌套等语法报错, 正巧以前也遇到过思考过这个问题. 今天顺便就再次折腾了一下~
@@ -365,10 +365,10 @@ let str = &#39;123abcXYZ&#39;; console.log(str.replace(/ab/, &#39;-$$-&#39;)); /
     
     <item>
       <title>复习正则表达式</title>
-      <link>/daily/2018-02-01-regexp/</link>
+      <link>https://whidy.github.io/daily/2018-02-01-regexp/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-02-01-regexp/</guid>
+      <guid>https://whidy.github.io/daily/2018-02-01-regexp/</guid>
       <description>2018年2月1日 晴 无聊
  复习正则表达式  昨天感觉不在状态, 边看正则边打酱油, 所以没有什么好写的, 今天总结一下.
 正好ES6也有正则方面的内容, 看看有什么新特性, 顺便又把精通正则表达式拿出来粗看了前面几章节, 于是给自己出了几道题.
@@ -379,10 +379,10 @@ now is 09:4 am test now isx9:4 am test now isx2:54 am test now isA09:04 amwtest 
     
     <item>
       <title>ECMAScript6入门/JS事件</title>
-      <link>/daily/2018-01-30-es6-javascript-event/</link>
+      <link>https://whidy.github.io/daily/2018-01-30-es6-javascript-event/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-30-es6-javascript-event/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-30-es6-javascript-event/</guid>
       <description>2018年1月30日 小雨 无聊
  ECMAScript6入门 / JS事件 模板字符串(Template literals)中的标签模板  模板字符串非常棒的功能, 减少了HTML拼接的繁琐, 其中标签模板, 这个东西初看起来很奇怪, 多结合实例会好理解一些.
 以下结合MDN和ECMAScript6入门做个笔记
@@ -393,10 +393,10 @@ let a = 5; let b = 10; tag`Hello ${a + b} world ${a * b}`; // 等同于 tag([&#3
     
     <item>
       <title>ECMAScript6入门/函数</title>
-      <link>/daily/2018-01-29-es6-function/</link>
+      <link>https://whidy.github.io/daily/2018-01-29-es6-function/</link>
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-29-es6-function/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-29-es6-function/</guid>
       <description>2018年1月29日 阴有小雨 一般
  ECMAScript6入门 / 函数 ECMAScript6入门 我再次阅读字符串的扩展这部分, 老实说, 这一节关于charCodeAt, charAt, codePointAt, fromCodePoint, at, normalize这些东西感到枯燥的很, 我还不能理解这些内容在实际应用上的广泛性.
 函数(Function)  关于函数得知识点, 我才发现我欠缺的多得多. 以下是我对函数了解较少或者需要注意的几个点得总结.
@@ -408,10 +408,10 @@ function walkTree(node) { if (node == null) // return; // do something with node
     
     <item>
       <title>styledcomponents/todolist/toreadlist</title>
-      <link>/daily/2018-01-28-styledcomponents/</link>
+      <link>https://whidy.github.io/daily/2018-01-28-styledcomponents/</link>
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-28-styledcomponents/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-28-styledcomponents/</guid>
       <description>2018年1月28日 阴 忧伤
  styled-components了解 / 创建To Read List和To Do List 周末两天并没有沉下心来搞点技术, 倒是玩游戏玩到头昏= =,
 Styled-components了解  前阵子奕东说, styled-components很好用, 然后今天正好看到@Real_CSS_Tricks提到3.0发布, 然后我就稍微看了下, 似乎主要结合react的开发, 将CSS样式和一点ES6来开发界面. 由于还不会用react, 先star上, 或许不久就会用上~
@@ -421,10 +421,10 @@ Styled-components了解  前阵子奕东说, styled-components很好用, 然后�
     
     <item>
       <title>ECMAScript6入门/PWA了解</title>
-      <link>/daily/2018-01-26-es6-pwa/</link>
+      <link>https://whidy.github.io/daily/2018-01-26-es6-pwa/</link>
       <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-26-es6-pwa/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-26-es6-pwa/</guid>
       <description>2018年1月26日 阴 一般
  ECMAScript6入门 / PWA了解 ECMAScript 6 入门  复习前几天学习的基础, 并继续学习(话说早就说再看函数了, 结果又绕回前面几章节了😂)
  变量提升 这个不是第一次说了, 但是之前看的没那么仔细, 今天小结几个容易忘记和忽略的地方.
@@ -435,10 +435,10 @@ var is_android = true; if (is_android) { function foo() { console.log(&#39;I am 
     
     <item>
       <title>安装Gatsby和Strapi过程中的各种问题</title>
-      <link>/daily/2018-01-25-gatsby-strapi-mongodb/</link>
+      <link>https://whidy.github.io/daily/2018-01-25-gatsby-strapi-mongodb/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-25-gatsby-strapi-mongodb/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-25-gatsby-strapi-mongodb/</guid>
       <description>2018年1月24日 阴 一般
  安装Gatsby和Strapi VPS上安装Gatsby和Strapi中遇到的各种问题解决方案和相关记录  接着昨天的, 继续解决昨天没有处理好的问题, 下班的时候问了个开发同事, 我说为啥连接总是超时, 但是有时候好像又能连上, 他说查一下具体的日志会比较好, 等下就试试.
  解决mongo创建服务器的WARNING提示  大多数情况下我是不愿意理睬WARNING信息的, 只要不是ERROR就好, 但是这次我有点不爽, 折腾了一会发现有的很难处理, 我错了, 我想我还是不死磕了吧😱
@@ -448,10 +448,10 @@ var is_android = true; if (is_android) { function foo() { console.log(&#39;I am 
     
     <item>
       <title>安装Gatsby和Strapi过程中的各种问题</title>
-      <link>/daily/2018-01-24-gatsby-strapi-mongodb/</link>
+      <link>https://whidy.github.io/daily/2018-01-24-gatsby-strapi-mongodb/</link>
       <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-24-gatsby-strapi-mongodb/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-24-gatsby-strapi-mongodb/</guid>
       <description>2018年1月24日 阴 一般
  安装Gatsby和Strapi VPS上安装Gatsby和Strapi中遇到的各种问题解决方案和相关记录  参考Building a static blog using Gatsby and Strapi
  安装Gatsby  事情总是不是那么顺利.
@@ -464,10 +464,10 @@ error Command failed: git clone git://github.com/gatsbyjs/gatsby-starter-default
     
     <item>
       <title>null和undefined复习/ES6作用域和babel的探索</title>
-      <link>/daily/2018-01-23-javascript-es6-babel/</link>
+      <link>https://whidy.github.io/daily/2018-01-23-javascript-es6-babel/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-23-javascript-es6-babel/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-23-javascript-es6-babel/</guid>
       <description>2018年1月23日 雾霾 一般
  null和undefined复习 / ES6作用域和babel的探索 再谈null和undefined 什么是null  null具有两大特点
   null是空的或者不存在的值 null需要被赋值  例如下面给a赋值为null
@@ -481,10 +481,10 @@ var d = {}; console.log(d.fake); // undefined  null和undefined相似之处 首�
     
     <item>
       <title>内网IP调整后引发谷歌浏览器历史记录的修改实现</title>
-      <link>/daily/2018-01-22-chrome-history-postcss/</link>
+      <link>https://whidy.github.io/daily/2018-01-22-chrome-history-postcss/</link>
       <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-22-chrome-history-postcss/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-22-chrome-history-postcss/</guid>
       <description>2018年1月22日 晴 一般
  ShadowRoot的认识 / PostCSS移动端ViewPort脚手架 内网IP调整引发的Chrome历史记录修改ShadowRoot的学习 由于IP经常变动, 导致本地项目的那些存在地址栏的历史记录就都失效了, 突然脑洞大开, 有没有办法修改本地历史记录的方法? &amp;gt; 想法是: 假设我原IP是192.168.1.51, 新IP是192.168.1.63, 我历史记录有http://192.168.1.51:8080/test.html, 我通过某种办法强行修改Chrome历史记录将192.168.1.51替换成192.168.1.63, 这样, 下次在地址栏输入test, 他就能自动填充http://192.168.1.63:8080/test.html了.
 现实是残酷的, Chrome软件的历史记录貌似是二进制文件, 也可能是出于安全考虑. 为了快速解决问题, 我就不打算去研究如何修改二进制文件了.
@@ -495,20 +495,20 @@ echo. &amp;gt;&amp;gt; %WINDIR%\system32\drivers\etc\hosts &amp;amp; echo 192.16
     
     <item>
       <title>ES6学习/Babel配置学习疑问/Markdown代码块高亮支持语法列表</title>
-      <link>/daily/2018-01-19-es6-babel-markdown/</link>
+      <link>https://whidy.github.io/daily/2018-01-19-es6-babel-markdown/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-19-es6-babel-markdown/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-19-es6-babel-markdown/</guid>
       <description>2018年1月19日 雾霾 一般
  ES6学习 / Babel配置学习疑问 / Markdown代码块高亮支持语法列表  想起来有个离线API手册查询软件, 叫Zeal, 装上了. 然后发现实际上有写文档的体验并不好- -. 查一下jQuery, Sass之类还是可以的. Stackoverflow上面的问题how to make spaces or url inside a code span with markdown syntax有了两个消息通知, 一个是居然有个人改了我的问题, 帮我修正语法错误, Stackoverflow上居然还有这种操作, 看了下改我问题的人的介绍, 看来是个完美主义者. 另外他回复提到了零宽度空格, 不过对我这个问题似乎没啥帮助. 发现另一个专门用来格式化JavaScript/TypeScript/CSS的插件Prettier - Code formatter, 至少在js格式化方面要比之前我用的Beautify好一些(Beautify插件提供的设置参数我尚未找到可能优化的地方). 例如这段代码, 原始代码如下 javascript function foo({x,y=5}) { console.log(x,y); }  Beautify格式化后: javascript function foo2({ x, y = 5 }) { console.log(x, y); }  Prettier格式化后: javascript function foo2({ x, y = 5 }) { console.</description>
     </item>
     
     <item>
       <title>提高网站可访问性的十个优化/Markdown语法研究/SSH</title>
-      <link>/daily/2018-01-18-website-tweaks-markdown-ssh/</link>
+      <link>https://whidy.github.io/daily/2018-01-18-website-tweaks-markdown-ssh/</link>
       <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-18-website-tweaks-markdown-ssh/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-18-website-tweaks-markdown-ssh/</guid>
       <description>2018年1月18日 雾霾 一般
  高网站可访问性的十个优化 / Markdown语法研究 / SSH / ES6  阅读对网站的可访问性带来巨大影响的几个小优化, 原标题Small Tweaks That Can Make a Huge Impact on Your Website’s Accessibility
  文中说明了语义化的重要性, 也推荐了一些HTML5的学习网站 页面只用一个main标签, 并给他一个ID 请尽量使用原生定义的功能标签, 比如按钮就用button, 虽然要重置样式, 比直接使用div或者a看起来麻烦, 但是它可以有更多的原生功能, 例如自带键盘监听事件. 例如你或许可以通过tab键, 焦点在这个按钮上, 并敲打enter的时候, 就能触发事件了, 这个是其他元素做不到的哦~ 当然我个人觉得这个仁者见仁智者见智了 页面中强烈推荐只有一个h1标签, 其他的h*标签请合理的使用对应的级别 这条就跟设计有关了, 请采用合理的色彩对比度 用一些特殊的标签辅助一些会使用特殊功能(屏幕阅读器aria-hidden=&amp;ldquo;true&amp;rdquo;, 那么屏幕阅读器就会忽略这个标签, 后面再增加一个几乎不可见却又没有隐藏的.visually-hidden`元素, 并写入提示信息, 屏幕阅读器就会读出这段内容, 然后他们就能听到这个提示语了, 于是两者都很happy了. 不过就目前我的经验和观察来看, 国内很少会有网站注意到网页辅助功能的运用 这点也是跟设计有关, 主要是说谨慎字体选择, 字体大小等排版, 还有需要高亮突出显示的一些关键元素 增加一些键盘事件绑定, 对某些键盘侠来说更加高效快捷, 并且看起来很酷, 另外有个小tips, 关于如何改变使用键盘当前焦距的元素额外样式, 使其看起来更美观醒目, 比如 css .your-element { background: red; } .</description>
@@ -516,10 +516,10 @@ echo. &amp;gt;&amp;gt; %WINDIR%\system32\drivers\etc\hosts &amp;amp; echo 192.16
     
     <item>
       <title>CSS动画技巧/JS面试题/速查手册/日常学习</title>
-      <link>/daily/2018-01-17-ftp-css-js/</link>
+      <link>https://whidy.github.io/daily/2018-01-17-ftp-css-js/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-17-ftp-css-js/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-17-ftp-css-js/</guid>
       <description>2018年1月17日 晴 一般
  css动画 / JS面试题研究 / 速查手册  完成博客内容Visual Studio Code几款FTP插件使用总结,并发布在SegmentFault文章
  自己使用Sublime Text 3的SFTP插件时, 执行了同步命令后, 请耐心等待, 否则执行过程中弹出的&amp;rdquo;quick panel&amp;rdquo;会自动消失, sftp的日志输出面板提示(Select via quick panel) No, 除非修改sftp配置&amp;quot;confirm_xxx&amp;quot;()例如&amp;rdquo;confirm_overwrite_newer&amp;ldquo;为true, 就会静默yes, 继续执行.
@@ -530,10 +530,10 @@ echo. &amp;gt;&amp;gt; %WINDIR%\system32\drivers\etc\hosts &amp;amp; echo 192.16
     
     <item>
       <title>博客插件优化及其他学习总结</title>
-      <link>/daily/2018-01-16-blog-optimize/</link>
+      <link>https://whidy.github.io/daily/2018-01-16-blog-optimize/</link>
       <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/daily/2018-01-16-blog-optimize/</guid>
+      <guid>https://whidy.github.io/daily/2018-01-16-blog-optimize/</guid>
       <description>2018年1月16日 晴 一般
  博客插件优化 / VSCODE的FTP插件探索 / 不常见的JS写法 / SASS父级选择器写法研究 Wordpress相关优化更新  WP的评论提示插件的更新优化,(由于之前方案较旧,全部更新)
 Comment Reply Notifier插件被删除替代
